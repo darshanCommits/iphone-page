@@ -8,10 +8,12 @@
 	/* COLORS */
 	--font-color: white;
 
-  /* gray */
-  --current-bg-color : 227; /* will change using event handlers using js, default is gray */
-  --bg-depth : 10%; /* this value determines the luminousity of the color, could be set manually or using js */
-  --bg-color : hsl(var(--current-bg-color), 20%, var(--bg-depth))
+	/* gray */
+	--current-bg-color: 227;
+	/* will change using event handlers using js, default is gray */
+	--bg-depth: 10%;
+	/* this value determines the luminousity of the color, could be set manually or using js */
+	--bg-color: hsl(var(--current-bg-color), 20%, var(--bg-depth))
 }
 
 @font-face {
@@ -122,23 +124,29 @@ h3:last-of-type {
 
 #iphone__black {
 	position: absolute;
-	top: 50%;
-	right: 25%;
-	background-color: black;
+	animation: changePhone 4s linear infinite;
+	top: 45%;
+	right: 20%;
+}
+
+#iphone__black img {
+
 	width: 100px;
-	aspect-ratio: 18/9;
-	transform: translateY(-500px);
-	animation: changePhone 1s linear infinite;
 }
 
 @keyframes changePhone {
 	from {
-		transform: rotate(180deg) translate(300px) rotate(-180deg) translateX(250px);
-		scale: 1.5;
+		transform: rotate(90deg) translate(300px) rotate(-90deg) translateX(300px);
+		scale: 0.5;
+	}
+
+	50% {
+		transform: rotate(180deg) translate(400px) rotate(-180deg) translateX(300px);
+		scale: 1;
 	}
 
 	to {
-		transform: rotate(270deg) translate(300px) rotate(-270deg) translateX(120px);
-		scale: 1;
+		transform: rotate(270deg) translate(600px) rotate(-270deg) translateX(300px);
+		scale: 0.5;
 	}
 }
