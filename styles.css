@@ -124,11 +124,10 @@ h3:last-of-type {
 
 #iphone__black {
 	position: absolute;
-	/*	animation: changePhone 4s alternate-reverse;
-*/
+	animation: nextPhone 1.5s ease-out;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	right: 20%;
+	right: 25%;
 }
 
 #iphone__black img {
@@ -136,21 +135,19 @@ h3:last-of-type {
 	width: 100px;
 }
 
-@keyframes changePhone {
+@keyframes nextPhone {
 	from {
-		transform: rotate(90deg) translate(300px) rotate(-90deg) translateX(300px);
+		transform: rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
 		scale: 0.5;
 	}
 
 	to {
-		/*		transform: rotate(190deg) translate(400px) rotate(-190deg) (top-reverse
-bottom
-transform: translate(-50%, -50%);
-		scale501;
+		transform: rotate(180deg) translate(300px) rotate(-180deg) translateX(300px) translate(-50%, -50%);
+		scale: 1;
 	}
 
 	/*	to {
 		transform: rotate(270deg) translate(600px) rotate(-270deg) translateX(300px);
 		scale: 0.5;
 	}*/
-	}
+}
