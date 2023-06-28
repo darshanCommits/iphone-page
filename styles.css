@@ -24,7 +24,7 @@
 
 body {
 	/* GRAY */
-
+	backdrop-filter: blur(3px);
 	background-color: hsla(227, 25%, 20%, 1);
 	background: radial-gradient(circle at center,
 			hsl(227, 20%, 50%),
@@ -131,14 +131,13 @@ h3:last-of-type {
 }
 
 #iphone__black img {
-
-	width: 200px;
+	width: 300px;
 }
 
 
 @keyframes nextPhone {
 	0% {
-		transform: scale(0.3) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
+		transform: scale(0.2) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
 	}
 
 	100% {
