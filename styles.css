@@ -124,8 +124,10 @@ h3:last-of-type {
 
 #iphone__black {
 	position: absolute;
-	animation: changePhone 4s linear infinite;
-	top: 45%;
+	/*	animation: changePhone 4s alternate-reverse;
+*/
+	top: 50%;
+	transform: translate(-50%, -50%);
 	right: 20%;
 }
 
@@ -140,13 +142,15 @@ h3:last-of-type {
 		scale: 0.5;
 	}
 
-	50% {
-		transform: rotate(180deg) translate(400px) rotate(-180deg) translateX(300px);
-		scale: 1;
+	to {
+		/*		transform: rotate(190deg) translate(400px) rotate(-190deg) (top-reverse
+bottom
+transform: translate(-50%, -50%);
+		scale501;
 	}
 
-	to {
+	/*	to {
 		transform: rotate(270deg) translate(600px) rotate(-270deg) translateX(300px);
 		scale: 0.5;
+	}*/
 	}
-}
