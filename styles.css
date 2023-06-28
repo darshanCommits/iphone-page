@@ -124,10 +124,10 @@ h3:last-of-type {
 
 #iphone__black {
 	position: absolute;
-	animation: nextPhone 0.8s ease-out;
+	animation: nextPhone 1s ease-out;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	right: 25%;
+	right: 10%;
 }
 
 #iphone__black img {
@@ -138,7 +138,7 @@ h3:last-of-type {
 
 @keyframes nextPhone {
 	0% {
-		transform: scale(0.5) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
+		transform: scale(0.3) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
 	}
 
 	100% {
