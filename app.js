@@ -22,7 +22,7 @@ image.addEventListener("animationend", () => {
 function changeAnim(id) {
 	const image = document.querySelector(`#iphone__${id}`);
 	console.log(image)
-	apRmCls(image, "btmToMid")
+	apRmCls(image, animationUp[0])
 }
 
 function apRmCls(elem, name, duration = 1500) {

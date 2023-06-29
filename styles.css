@@ -141,8 +141,10 @@ h3:last-of-type {
 
 #iphone__purple {
 	top: 50%;
+	animation-duration: 0.8s;
+	animation-play-state: paused;
+	transform: scale(0.2) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
 	right: 10%;
-	transform: scale(0.2);
 }
 
 
