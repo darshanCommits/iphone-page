@@ -130,23 +130,17 @@ h3:last-of-type {
 	position: absolute;
 	animation-duration: 0.8s;
 	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	top: 50%;
+	right: 10%;
 }
 
 #iphone__black {
-	top: 50%;
-
 	animation-play-state: paused;
 	transform: translate(-50%, -50%);
-	right: 10%;
 }
 
 #iphone__purple {
-	top: 50%;
-	animation-play-state: paused;
-	animation-name: btmToMidAnim;
-	animation-iteration-count: infinite;
 	transform: scale(0.2) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
-	right: 10%;
 }
 
 
