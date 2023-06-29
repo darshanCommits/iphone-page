@@ -91,7 +91,7 @@ h3:last-of-type {
 /* Button Styles */
 #info button {
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 10px 28px;
 	font-size: 16px;
 	font-weight: bold;
 	text-align: center;
@@ -101,6 +101,7 @@ h3:last-of-type {
 	color: white;
 	border: 1px solid gray;
 	cursor: pointer;
+	margin: 0.1rem;
 }
 
 #info button:nth-of-type(1):hover {
@@ -125,24 +126,32 @@ h3:last-of-type {
 
 
 
-#iphone__black {
+#image div {
 	position: absolute;
 	animation-duration: 0.8s;
 	animation-play-state: paused;
 	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	/* Add custom timing function */
-	/*	animation: prevPhone 3s ease-out paused infinite;*/
+}
+
+#iphone__black {
 	top: 50%;
 	transform: translate(-50%, -50%);
 	right: 10%;
 }
 
-#iphone__black img {
-	width: 300px;
+#iphone__purple {
+	top: 50%;
+	right: 10%;
+	transform: scale(0.2);
 }
 
 
-@keyframes nextPhone {
+#image img {
+	width: 320px;
+}
+
+
+@keyframes btmToMidAnim {
 	0% {
 		transform: scale(0.2) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
 	}
@@ -152,7 +161,8 @@ h3:last-of-type {
 	}
 }
 
-@keyframes prevPhone {
+
+@keyframes midToTopAnim {
 	from {
 		transform: rotate(180deg) translate(300px) rotate(-180deg) translateX(300px) translate(-50%, -50%);
 		animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -165,11 +175,42 @@ h3:last-of-type {
 	}
 }
 
-.prevPhone {
-	animation-name: prevPhone;
+/*downwards*/
+
+@keyframes topToMidAnim {
+	to {
+		transform: rotate(180deg) translate(300px) rotate(-180deg) translateX(300px) translate(-50%, -50%);
+	}
+
+	from {
+		transform: scale(0.2) rotate(90deg) translateY(300px) translate(-300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
+		top: 0%;
+	}
 }
 
-.nextPhone {
-	animation-duration: 0.8s;
-	animation-play-state: paused;
+@keyframes midToBtmAnim {
+	to {
+		transform: scale(0.2) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
+	}
+
+	from {
+		transform: scale(1) rotate(180deg) translate(300px) rotate(-180deg) translateX(300px) translate(-50%, -50%);
+	}
+}
+
+/*JS CLASSES*/
+.btmToMid {
+	animation-name: btmToMidAnim;
+}
+
+.midToTop {
+	animation-name: midToTopAnim;
+}
+
+.topToMid {
+	animation-name: topToMidAnim;
+}
+
+.midToBtm {
+	animation-name: midToBtmAnim;
 }
