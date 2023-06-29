@@ -5,15 +5,17 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" />
 	<title>anim prev</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="styles.css" />
+	<script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="app.js" defer></script>
-	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 	<div id="phoneDes">
 		<div></div>
 		<div id="info">
-			<h2><img src="./apple-icon.svg"> iPhone</h2>
+			<h2><img src="./apple-icon.svg" /> iPhone</h2>
 
 			<h3>Apple iPhone 15 Pro</h3>
 			<p>
@@ -29,18 +31,25 @@
 				<button id="gold">Gold</button>
 			</div>
 		</div>
+		<div id="image" class="swiper">
+			<div class="swiper-wrapper">
 
-		<div id="image">
-			<div id="iphone__black" class="top big-image">
-				<img id="big-image" src="./assets/gray.png" alt="iphone-gray">
-			</div>
-			<div id="iphone__purple" src="./assets/purple.png" class="btm">
-				<img src="./assets/purple.png" alt="iphone-purple" </div>
-			</div>
+				<div class="swiper-slide">
+					<img src="./assets/gray.png" alt="iphone-gray" />
+				</div>
 
-			<div id="iphone__grey" class="mid"></div>
+				<div class="swiper-slide">
+					<img src="./assets/purple.png" alt="iphone-purple" />
+				</div>
+
+				<div class="swiper-slide">
+					<img src="./assets/gray.png" alt="iphone-gray" />
+				</div>
+
+
+			</div>
 		</div>
-
+	</div>
 </body>
 
 </html>

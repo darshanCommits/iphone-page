@@ -126,10 +126,11 @@ h3:last-of-type {
 
 
 
-#image div {
+/*#image div {
 	position: absolute;
 	animation-duration: 0.8s;
 	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	animation-fill-mode: forwards;
 	top: 50%;
 	right: 10%;
 }
@@ -143,9 +144,9 @@ h3:last-of-type {
 	transform: scale(0.2) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
 }
 
-
+*/
 #image img {
-	width: 320px;
+	width: 220px;
 }
 
 
@@ -163,12 +164,10 @@ h3:last-of-type {
 @keyframes midToTopAnim {
 	from {
 		transform: rotate(180deg) translate(300px) rotate(-180deg) translateX(300px) translate(-50%, -50%);
-		animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	to {
 		transform: scale(0.2) rotate(90deg) translateY(300px) translate(-300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
-		animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 		top: 0%;
 	}
 }
@@ -211,4 +210,28 @@ h3:last-of-type {
 
 .midToBtm {
 	animation-name: midToBtmAnim;
+}
+
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+/*SWIPER ANIMATIONS*/
+
+
+.prev,
+.next {
+	filter: blur(5px);
+	scale: 0.2;
+}
+
+.active {
+	filter: none;
+	scale: 1;
 }
