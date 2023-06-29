@@ -1,8 +1,4 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
+
 
 :root {
 	/* COLORS */
@@ -52,6 +48,7 @@ body {
 	display: grid;
 	grid-template-columns: 18% 35% 47%;
 	height: 100vh;
+	max-height: 100px;
 	color: var(--font-color);
 }
 
@@ -212,7 +209,7 @@ h3:last-of-type {
 	animation-name: midToBtmAnim;
 }
 
-.swiper {
+.swiper-container {
 	width: 100%;
 	height: 100%;
 }
@@ -225,7 +222,7 @@ h3:last-of-type {
 /*SWIPER ANIMATIONS*/
 
 
-.prev,
+/* .prev,
 .next {
 	filter: blur(5px);
 	scale: 0.2;
@@ -234,4 +231,15 @@ h3:last-of-type {
 .active {
 	filter: none;
 	scale: 1;
+} */
+
+/* Swiper classes */
+.products-container {
+	width: 50%;
+	height: 700px;
+	max-height: 800px;
+}
+
+.swiper-slide-active {
+	background-color: black;
 }

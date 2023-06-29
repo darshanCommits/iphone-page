@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>anim prev</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+    >
+      swiper.init()
+    </script>
+    <script src="app.js" defer></script>
+  </head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title>anim prev</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-	<link rel="stylesheet" href="styles.css" />
-	<script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-	<script src="app.js" defer></script>
-</head>
+  <body>
+    <div id="phoneDes">
+      <div></div>
+      <div id="info">
+        <h2><img src="./apple-icon.svg" /> iPhone</h2>
 
-<body>
-	<div id="phoneDes">
-		<div></div>
-		<div id="info">
-			<h2><img src="./apple-icon.svg" /> iPhone</h2>
+        <h3>Apple iPhone 15 Pro</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum
+          cupiditate eum officia ratione, ipsam, accusamus necessitatibus alias,
+          assumenda dolor autem corporis hic at!
+        </p>
 
-			<h3>Apple iPhone 15 Pro</h3>
-			<p>
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum
-				cupiditate eum officia ratione, ipsam, accusamus necessitatibus alias,
-				assumenda dolor autem corporis hic at!
-			</p>
+        <h3>$930.00</h3>
+        <div id="buttons">
+          <button id="black" data-slide="0">Black</button>
+          <button id="purple" data-slide="1">Purple</button>
+          <button id="gold" data-slide="2">Gold</button>
+        </div>
+      </div>
+      <div class="products-container">
+        <div id="image" class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/gray.png" alt="iphone-gray" />
+            </div>
 
-			<h3>$930.00</h3>
-			<div id="btns">
-				<button id="black">Black</button>
-				<button id="purple">Purple</button>
-				<button id="gold">Gold</button>
-			</div>
-		</div>
-		<div id="image" class="swiper">
-			<div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/purple.png" alt="iphone-purple" />
+            </div>
 
-				<div class="swiper-slide">
-					<img src="./assets/gray.png" alt="iphone-gray" />
-				</div>
-
-				<div class="swiper-slide">
-					<img src="./assets/purple.png" alt="iphone-purple" />
-				</div>
-
-				<div class="swiper-slide">
-					<img src="./assets/gray.png" alt="iphone-gray" />
-				</div>
-
-
-			</div>
-		</div>
-	</div>
-</body>
-
+            <div class="swiper-slide">
+              <img src="./assets/purple.png" alt="iphone-gray" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/purple.png" alt="iphone-gray" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+    >
+      swiper.init()
+    </script>
+  </body>
 </html>

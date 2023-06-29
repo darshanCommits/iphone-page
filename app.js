@@ -1,4 +1,3 @@
-
 /*const swiper = new Swiper(...);
 
 const animationUp = ["btmToMid", "midToTop"];
@@ -45,8 +44,6 @@ function apRmCls(elem, name, duration = 1500) {
 
 */
 
-
-
 /*document.addEventListener("DOMContentLoaded", _ => {
 
 	const swiper = new Swiper('.swiper', {
@@ -85,56 +82,26 @@ function apRmCls(elem, name, duration = 1500) {
 	});
 
 })
-*/document.addEventListener("DOMContentLoaded", () => {
-	const swiper = new Swiper('.swiper', {
-		direction: 'vertical',
-		slidesPerView: 3,
-		slidePrevClass: "prev",
-		slideNextClass: "next",
-		slideActiveClass: "active",
-	});
+*/
+document.addEventListener("DOMContentLoaded", () => {
+  const swiper = new Swiper(".swiper-container", {
+    intialSlide: 1,
+    slidesPerView: 2,
+    direction: "vertical",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 
-	const blackButton = document.querySelector('#black');
-	const purpleButton = document.querySelector('#purple');
-	const goldButton = document.querySelector('#gold');
+  const buttons = [...document.querySelector("#buttons").children];
 
-	blackButton.addEventListener('click', () => {
-		swiper.slideNext(1500);
-		triggerAnimation('btmToMid', 'midToBtm');
-	});
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log(button);
 
-	purpleButton.addEventListener('click', () => {
-		const currentIndex = swiper.activeIndex;
-		if (currentIndex === 0) {
-			swiper.slideNext(1500);
-			triggerAnimation('btmToMid', 'midToBtm');
-		} else {
-			swiper.slidePrev(1500);
-			triggerAnimation('topToMid', 'midToTop');
-		}
-	});
-
-	goldButton.addEventListener('click', () => {
-		const currentIndex = swiper.activeIndex;
-		if (currentIndex === 2) {
-			swiper.slidePrev(1500);
-			triggerAnimation('topToMid', 'midToTop');
-		} else {
-			swiper.slideNext(1500);
-			triggerAnimation('btmToMid', 'midToBtm');
-		}
-	});
-
-	function triggerAnimation(activeClass, targetClass) {
-		const activeSlide = swiper.slides[swiper.activeIndex];
-		const targetSlide = swiper.slides[swiper.activeIndex + 1] || swiper.slides[swiper.activeIndex - 1];
-		if (activeSlide && targetSlide) {
-			activeSlide.classList.add(activeClass);
-			targetSlide.classList.add(targetClass);
-			setTimeout(() => {
-				activeSlide.classList.remove(activeClass);
-				targetSlide.classList.remove(targetClass);
-			}, 1500);
-		}
-	}
+      const slideIndex = parseInt(button.getAttribute("data-slide"));
+      swiper.slideTo(slideIndex);
+    });
+  });
 });
