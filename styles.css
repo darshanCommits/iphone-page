@@ -149,7 +149,7 @@ h3:last-of-type {
 
 */
 #image img {
-	width: 220px;
+	width: 200px;
 }
 
 
@@ -245,34 +245,31 @@ h3:last-of-type {
 	width: 100%;
 }
 
+#image .swiper-wrapper .swiper-slide {
+	display: flex;
+}
+
 .swiper-slide-active {
+	scale: 1.5;
+	left: 350px;
 	animation-duration: 1s;
 	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	animation-fill-mode: forwards;
-	animation-name: csa;
 }
-
-.swiper-slide {
-	position: relative;
-	background: black;
-}
-
-.swiper-slide img {}
 
 .swiper-slide-next,
 .swiper-slide-prev {
-	transform: translateX(100px);
 	scale: 0.4;
 	opacity: .3;
 }
 
 @keyframes customAnimation {
 	from {
-		transform: scale(0.2) translateY(100px) translate(-50%, -50%);
+		opacity: 0;
 	}
 
 	to {
-		transform: scale(1) translateX(-100px) translate(-50%, -50%);
+		left: 0;
 	}
 }
 

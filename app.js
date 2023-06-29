@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			const animationProgress = CubicBezierProgress(progress, cubicBezier);
 
 			// Customize the animation using the progress value
-			const x = -300 * animationProgress;
-			const y = -100 * animationProgress;
+			const x = 300;
+			const y = 100;
 
 			return `translate(${x}px, ${y}px)`;
 		},
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		slidesPerView: 3,
 		direction: "vertical",
 		centeredSlides: true,
-		cssMode: true,
+		allowTouchMove: false,
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
