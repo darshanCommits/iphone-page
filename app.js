@@ -16,6 +16,7 @@ console.log([...document.querySelector("#image").children].forEach(element => {
 */
 
 const image = document.querySelector("#iphone__black")
-image.addEventListener("click", () => {
-	setTimeout(image.classList.add("change"), 1111)
+image.addEventListener("click", _ => {
+	image.style.animationPlayState = "running"
 })
+console.log(image.style.animationPlayState)

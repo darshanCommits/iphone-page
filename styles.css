@@ -24,7 +24,6 @@
 
 body {
 	/* GRAY */
-	backdrop-filter: blur(3px);
 	background-color: hsla(227, 25%, 20%, 1);
 	background: radial-gradient(circle at center,
 			hsl(227, 20%, 50%),
@@ -54,6 +53,10 @@ body {
 	grid-template-columns: 18% 35% 47%;
 	height: 100vh;
 	color: var(--font-color);
+}
+
+h2 {
+	font-size: 2.3rem;
 }
 
 #info {
@@ -124,7 +127,7 @@ h3:last-of-type {
 
 #iphone__black {
 	position: absolute;
-	animation: nextPhone 1s ease-out;
+	animation: nextPhone 0.8s ease-out paused;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	right: 10%;
