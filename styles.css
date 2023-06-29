@@ -1,4 +1,8 @@
-
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
 
 :root {
 	/* COLORS */
@@ -28,18 +32,19 @@ body {
 			hsl(227, 20%, 20%),
 			hsl(227, 20%, 10%));
 
-
+	height: 100%;
+	width: 100%;
 	/* PURPLE */
 
 	/* background-color: hsla(245, 25%, 20%, 1);
-	background: radial-gradient(
-		circle at center,
-		hsl(245, 20%, 50%),
-		hsl(245, 20%, 35%),
-		hsl(245, 20%, 25%),
-		hsl(245, 20%, 20%),
-		hsl(245, 20%, 10%)
-	); */
+  background: radial-gradient(
+    circle at center,
+    hsl(245, 20%, 50%),
+    hsl(245, 20%, 35%),
+    hsl(245, 20%, 25%),
+    hsl(245, 20%, 20%),
+    hsl(245, 20%, 10%)
+  ); */
 
 	font-family: "San Francisco";
 }
@@ -48,7 +53,7 @@ body {
 	display: grid;
 	grid-template-columns: 18% 35% 47%;
 	height: 100vh;
-	max-height: 100px;
+	overflow: hidden;
 	color: var(--font-color);
 }
 
@@ -105,6 +110,8 @@ h3:last-of-type {
 	background-color: #444341;
 }
 
+
+
 #info button:nth-of-type(2):hover {
 	background-color: #0e362c;
 }
@@ -124,21 +131,21 @@ h3:last-of-type {
 
 
 /*#image div {
-	position: absolute;
-	animation-duration: 0.8s;
-	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	animation-fill-mode: forwards;
-	top: 50%;
-	right: 10%;
+  position: absolute;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+  top: 50%;
+  right: 10%;
 }
 
 #iphone__black {
-	animation-play-state: paused;
-	transform: translate(-50%, -50%);
+  animation-play-state: paused;
+  transform: translate(-50%, -50%);
 }
 
 #iphone__purple {
-	transform: scale(0.2) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
+  transform: scale(0.2) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
 }
 
 */
@@ -210,8 +217,8 @@ h3:last-of-type {
 }
 
 .swiper-container {
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 }
 
 .swiper-wrapper {
@@ -224,20 +231,18 @@ h3:last-of-type {
 
 /* .prev,
 .next {
-	filter: blur(5px);
-	scale: 0.2;
+  filter: blur(5px);
+  scale: 0.2;
 }
 
 .active {
-	filter: none;
-	scale: 1;
+  filter: none;
+  scale: 1;
 } */
 
 /* Swiper classes */
 .products-container {
 	width: 50%;
-	height: 700px;
-	max-height: 800px;
 }
 
 .swiper-slide-active {
