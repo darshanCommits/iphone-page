@@ -245,14 +245,19 @@ h3:last-of-type {
 	width: 100%;
 }
 
+.swiper-slide {}
+
 #image .swiper-wrapper .swiper-slide {
 	display: flex;
+	position: relative;
+	transition: transform 0.3s ease;
 }
 
 .swiper-slide-active {
 	scale: 1.5;
 	left: 350px;
 	animation-duration: 1s;
+	transform: translateX(0);
 	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	animation-fill-mode: forwards;
 }
@@ -260,7 +265,12 @@ h3:last-of-type {
 .swiper-slide-next,
 .swiper-slide-prev {
 	scale: 0.4;
+	transform: translateX(100);
 	opacity: .3;
+}
+
+.swiper-slide-prev.swiper-slide-active {
+	transform: translateX(0);
 }
 
 @keyframes customAnimation {
@@ -280,5 +290,69 @@ h3:last-of-type {
 
 	to {
 		scale: 0.4;
+	}
+}
+
+.animated-slide {
+	animation: slideAnimation 1s ease;
+}
+
+.animated-prev-slide {
+	animation: prevSlideAnimation 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animated-next-slide {
+	animation: nextSlideAnimation 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animated-active-slide {
+	animation: activeSlideAnimation 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideAnimation {
+	from {
+		/* Define the starting position for the slide */
+		transform: translateX(100px);
+	}
+
+	to {
+		/* Define the ending position for the slide */
+		transform: translateX(0);
+	}
+}
+
+@keyframes prevSlideAnimation {
+	from {
+		/* Define the starting position for the previous slide */
+		transform: translateX(-100px);
+	}
+
+	to {
+		/* Define the ending position for the previous slide */
+		transform: translateX(0);
+	}
+}
+
+@keyframes nextSlideAnimation {
+	from {
+		/* Define the starting position for the next slide */
+		transform: translateX(100px);
+	}
+
+	to {
+		/* Define the ending position for the next slide */
+		transform: translateX(0);
+	}
+}
+
+@keyframes activeSlideAnimation {
+	from {
+		/* Define the starting position for the active slide */
+		transform: translateX(0);
+	}
+
+	to {
+		/* Define the ending position for the active slide */
+		transform: translateX(0);
 	}
 }
