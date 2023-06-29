@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			return `translate(${x}px, ${y}px)`;
 		},
 		intialSlide: 1,
-		slidesPerView: 2,
+		slidesPerView: 3,
 		direction: "vertical",
+		centeredSlides: true,
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",

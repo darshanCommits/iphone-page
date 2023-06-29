@@ -242,23 +242,34 @@ h3:last-of-type {
 /* Swiper classes */
 .products-container {
 	overflow: hidden;
-	width: 50%;
+	width: 80%;
 }
 
 .swiper-slide-active {
-	animation-duration: 0.8s;
+	animation-duration: 1s;
 	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	z-index: 9999;
 	animation-fill-mode: forwards;
-	animation-name: customAnimation;
+	animation-name: csa;
 }
 
 @keyframes customAnimation {
 	from {
-		transform: scale(0.2) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translateY(100px) translate(-50%, -50%);
+		transform: scale(0.2) translateX(300px) translateY(100px) translate(-50%, -50%);
 	}
 
 	to {
-		transform: scale(1) rotate(180deg) translate(300px) rotate(-180deg) translateX(300px) translateY(100px) translate(-50%, -50%);
+		transform: scale(1) translate(300px) translateX(-100px) translateY(100px) translate(-50%, -50%);
+	}
+}
+
+@keyframes csa {
+	from {
+		translate: scale(1);
+		opacity: 100%;
+	}
+
+	to {
+		translate: scale(0.2);
+		scale: 0.4;
 	}
 }
