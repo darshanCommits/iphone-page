@@ -14,9 +14,19 @@ console.log([...document.querySelector("#image").children].forEach(element => {
 }));
 
 */
-
-const image = document.querySelector("#iphone__black")
-image.addEventListener("click", _ => {
-	image.style.animationPlayState = "running"
+const image = document.querySelector(".big-image")
+const btns = [...document.querySelector("#btns").children].forEach(btn => {
+	btn.addEventListener("click", _ => {
+		changeAnim();
+		image.style.animationPlayState = "running"
+	})
 })
-console.log(image.style.animationPlayState)
+
+image.addEventListener("animationend", () => {
+	console.log(image.style.animationName);
+});
+
+function changeAnim() {
+	image.classList.toggle("prevPhone");
+	image.classList.toggle("nextPhone");
+}
