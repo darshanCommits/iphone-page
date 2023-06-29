@@ -242,7 +242,7 @@ h3:last-of-type {
 /* Swiper classes */
 .products-container {
 	overflow: hidden;
-	width: 80%;
+	width: 100%;
 }
 
 .swiper-slide-active {
@@ -252,24 +252,36 @@ h3:last-of-type {
 	animation-name: csa;
 }
 
+.swiper-slide {
+	position: relative;
+	background: black;
+}
+
+.swiper-slide img {}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+	transform: translateX(100px);
+	scale: 0.4;
+	opacity: .3;
+}
+
 @keyframes customAnimation {
 	from {
-		transform: scale(0.2) translateX(300px) translateY(100px) translate(-50%, -50%);
+		transform: scale(0.2) translateY(100px) translate(-50%, -50%);
 	}
 
 	to {
-		transform: scale(1) translate(300px) translateX(-100px) translateY(100px) translate(-50%, -50%);
+		transform: scale(1) translateX(-100px) translate(-50%, -50%);
 	}
 }
 
 @keyframes csa {
 	from {
-		translate: scale(1);
 		opacity: 100%;
 	}
 
 	to {
-		translate: scale(0.2);
 		scale: 0.4;
 	}
 }
