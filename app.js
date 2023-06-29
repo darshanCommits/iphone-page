@@ -1,26 +1,25 @@
-const image = document.querySelector(".big-image")
 const animationUp = ["btmToMid", "midToTop"];
 const animationDown = ["topToMid", "midToBtm"];
 
-const whichImage = () => {
-
+const whichImage = (id) => {
+	return document.querySelector(`#iphone__${id}`)
 }
 const btns = [...document.querySelector("#btns").children]
 btns.forEach(btn => {
 	btn.addEventListener("click", e => {
 		const clickedButton = e.target;
-		console.log(clickedButton.id)
-		changeAnim(clickedButton.id);
+		let image = whichImage(clickedButton.id);
+		// console.log(image)
+		changeAnim(image);
 		image.style.animationPlayState = "running"
 	})
 })
 
 image.addEventListener("animationend", () => {
-	console.log(image.style.animationName);
+	// console.log(image.style.animationName);
 });
 
-function changeAnim(id) {
-	const image = document.querySelector(`#iphone__${id}`);
+function changeAnim(image) {
 	console.log(image)
 	apRmCls(image, animationUp[0])
 }
