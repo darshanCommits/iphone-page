@@ -241,6 +241,7 @@ h3:last-of-type {
 
 /* Swiper classes */
 .products-container {
+	padding-left: 2rem;
 	overflow: hidden;
 	width: 100%;
 }
