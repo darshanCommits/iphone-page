@@ -5,15 +5,7 @@
 }
 
 :root {
-	/* COLORS */
 	--font-color: white;
-
-	/* gray */
-	--current-bg-color: 227;
-	/* will change using event handlers using js, default is gray */
-	--bg-depth: 10%;
-	/* this value determines the luminousity of the color, could be set manually or using js */
-	--bg-color: hsl(var(--current-bg-color), 20%, var(--bg-depth))
 }
 
 @font-face {
@@ -23,36 +15,14 @@
 }
 
 body {
-	/* GRAY */
-	background-color: hsla(227, 25%, 20%, 1);
-	background: radial-gradient(circle at center,
-			hsl(227, 20%, 50%),
-			hsl(227, 20%, 35%),
-			hsl(227, 20%, 25%),
-			hsl(227, 20%, 20%),
-			hsl(227, 20%, 10%));
-
 	height: 100%;
 	width: 100%;
-	/* PURPLE */
-
-	/* background-color: hsla(245, 25%, 20%, 1);
-  background: radial-gradient(
-    circle at center,
-    hsl(245, 20%, 50%),
-    hsl(245, 20%, 35%),
-    hsl(245, 20%, 25%),
-    hsl(245, 20%, 20%),
-    hsl(245, 20%, 10%)
-  ); */
-
 	font-family: "San Francisco";
 }
 
 #phoneDes {
 	display: grid;
 	grid-template-columns: 18% 35% 47%;
-	height: 100vh;
 	color: var(--font-color);
 }
 
@@ -63,13 +33,11 @@ h2 {
 #info {
 	display: flex;
 	justify-content: center;
-	/* align-items: end; */
 	flex-direction: column;
 }
 
 #info h3:first-of-type {
 	margin-top: 2rem;
-	/* margin-bottom: 1rem; */
 	font-size: 1.5rem;
 }
 
@@ -89,7 +57,6 @@ h3:last-of-type {
 	margin: 1rem 0;
 }
 
-/* Button Styles */
 #info button {
 	display: inline-block;
 	padding: 10px 28px;
@@ -109,8 +76,6 @@ h3:last-of-type {
 	background-color: #444341;
 }
 
-
-
 #info button:nth-of-type(2):hover {
 	background-color: #0e362c;
 }
@@ -127,31 +92,10 @@ h3:last-of-type {
 	background-color: #1f618d;
 }
 
-
-
-/*#image div {
-  position: absolute;
-  animation-duration: 0.8s;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-fill-mode: forwards;
-  top: 50%;
-  right: 10%;
-}
-
-#iphone__black {
-  animation-play-state: paused;
-  transform: translate(-50%, -50%);
-}
-
-#iphone__purple {
-  transform: scale(0.2) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
-}
-
-*/
 #image img {
-	width: 200px;
+	max-width: 200px;
+	height: auto;
 }
-
 
 @keyframes btmToMidAnim {
 	0% {
@@ -161,58 +105,6 @@ h3:last-of-type {
 	100% {
 		transform: scale(1) rotate(180deg) translate(300px) rotate(-180deg) translateX(300px) translate(-50%, -50%);
 	}
-}
-
-
-@keyframes midToTopAnim {
-	from {
-		transform: rotate(180deg) translate(300px) rotate(-180deg) translateX(300px) translate(-50%, -50%);
-	}
-
-	to {
-		transform: scale(0.2) rotate(90deg) translateY(300px) translate(-300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
-		top: 0%;
-	}
-}
-
-/*downwards*/
-
-@keyframes topToMidAnim {
-	to {
-		transform: rotate(180deg) translate(300px) rotate(-180deg) translateX(300px) translate(-50%, -50%);
-	}
-
-	from {
-		transform: scale(0.2) rotate(90deg) translateY(300px) translate(-300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
-		top: 0%;
-	}
-}
-
-@keyframes midToBtmAnim {
-	to {
-		transform: scale(0.2) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
-	}
-
-	from {
-		transform: scale(1) rotate(180deg) translate(300px) rotate(-180deg) translateX(300px) translate(-50%, -50%);
-	}
-}
-
-/*JS CLASSES*/
-.btmToMid {
-	animation-name: btmToMidAnim;
-}
-
-.midToTop {
-	animation-name: midToTopAnim;
-}
-
-.topToMid {
-	animation-name: topToMidAnim;
-}
-
-.midToBtm {
-	animation-name: midToBtmAnim;
 }
 
 .swiper-container {
@@ -225,28 +117,11 @@ h3:last-of-type {
 	height: 100%;
 }
 
-/*SWIPER ANIMATIONS*/
-
-
-/* .prev,
-.next {
-  filter: blur(5px);
-  scale: 0.2;
-}
-
-.active {
-  filter: none;
-  scale: 1;
-} */
-
-/* Swiper classes */
 .products-container {
-	padding-left: 2rem;
-	overflow: hidden;
+	padding-left: 5rem;
+	overflow-x: hidden;
 	width: 100%;
 }
-
-.swiper-slide {}
 
 #image .swiper-wrapper .swiper-slide {
 	display: flex;
@@ -274,44 +149,12 @@ h3:last-of-type {
 	transform: translateX(0);
 }
 
-@keyframes customAnimation {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		left: 0;
-	}
-}
-
-@keyframes csa {
-	from {
-		opacity: 100%;
-	}
-
-	to {
-		scale: 0.4;
-	}
-}
-
 .animated-slide {
 	animation: slideAnimation 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animated-slide-back {
 	animation: slideAnimationBack 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.animated-prev-slide {
-	animation: prevSlideAnimation 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.animated-next-slide {
-	animation: nextSlideAnimation 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.animated-active-slide {
-	animation: activeSlideAnimation 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes slideAnimation {
@@ -335,41 +178,5 @@ h3:last-of-type {
 	to {
 		/* Define the ending position for the slide */
 		transform: translate(0) scale(1);
-	}
-}
-
-@keyframes prevSlideAnimation {
-	from {
-		/* Define the starting position for the previous slide */
-		transform: translateX(-100px);
-	}
-
-	to {
-		/* Define the ending position for the previous slide */
-		transform: translateX(0px);
-	}
-}
-
-@keyframes nextSlideAnimation {
-	from {
-		/* Define the starting position for the next slide */
-		transform: translateX(100px);
-	}
-
-	to {
-		/* Define the ending position for the next slide */
-		transform: translateX(0);
-	}
-}
-
-@keyframes activeSlideAnimation {
-	from {
-		/* Define the starting position for the active slide */
-		transform: translateX(0);
-	}
-
-	to {
-		/* Define the ending position for the active slide */
-		transform: translateX(0);
 	}
 }

@@ -1,4 +1,13 @@
+document.body.style.transition = 'background 1s ease';
+const buttons = [...document.querySelector("#buttons").children];
+const bgColors = {
+	black: 227,
+	purple: 245,
+	gold: 100,
+
+}
 document.addEventListener("DOMContentLoaded", () => {
+	applyDynamicCSS(bgColors.black);
 	const swiper = new Swiper(".swiper-container", {
 
 		effect: 'custom', // Set the effect to 'custom'
@@ -44,14 +53,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 	// Add other options and configurations as needed
-	const buttons = [...document.querySelector("#buttons").children];
 
 	buttons.forEach((button) => {
 		button.addEventListener("click", () => {
-			console.log(button);
+			console.log(button.id);
+			const color = button.id;
+
+			applyDynamicCSS(bgColors[color]);
 
 			const slideIndex = parseInt(button.getAttribute("data-slide"));
 			swiper.slideTo(slideIndex);
 		});
 	});
 });
+
+function applyDynamicCSS(hue) {
+	const saturation = '20%';
+	const lightness = ['50%', '35%', '25%', '20%', '10%'];
+
+	const colorHSL = `
+     radial-gradient(circle at center,
+      ${lightness.map((light) => `hsl(${hue}, ${saturation}, ${light})`).join(', ')}
+    )
+  `;
+	document.body.style.backgroundImage = colorHSL;
+}
+
