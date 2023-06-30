@@ -5,6 +5,7 @@
 }
 
 :root {
+	--pSize: 1rem;
 	--h2Size: 2.3rem;
 	--h3Size: 1.5rem;
 	--btnFntSize: 1rem;
@@ -52,6 +53,7 @@ div {
 }
 
 #info p {
+	font-size: var(--pSize);
 	width: 80%;
 	margin: 1rem 0;
 	color: rgb(175, 175, 175);
@@ -189,7 +191,12 @@ h3:last-of-type {
 	}
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
+
+	.swiper-slide-next,
+	.swiper-slide-prev {
+		visibility: hidden;
+	}
 
 	.products-container {
 		padding-left: 0vw;
@@ -223,17 +230,21 @@ h3:last-of-type {
 
 @media (max-width : 680px) {
 	:root {
+		--pSize: .8rem;
 		--h2Size: 2rem;
 		--h3Size: 1.3rem;
-		--btnFontSize: .9rem;
-	}
-
-	#info p {
-		font-size: .9rem;
+		--btnFontSize: .5rem;
 	}
 }
 
 @media (max-width : 600px) {
+
+
+	:root {
+		--h2Size: 2rem;
+		--h3Size: 1.3rem;
+		--btnFontSize: .9rem;
+	}
 
 	#info p {
 		width: 80%;
