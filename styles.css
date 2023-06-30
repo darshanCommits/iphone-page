@@ -261,11 +261,15 @@ h3:last-of-type {
 	.products-container {
 		padding: 0;
 		padding-top: 30vh;
-		height: 70vh;
+		height: 50vh;
 	}
 
 	.swiper-container {
 		width: inherit;
 		height: inherit;
+	}
+
+	#image img {
+		transform: translateY(-70px);
 	}
 }

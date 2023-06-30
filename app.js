@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		effect: 'custom', // Set the effect to 'custom'
 		intialSlide: 0,
-		slidesPerView: 1,
+		slidesPerView: window.matchMedia("(min-width: 600px)").matches ? 3 : 1,
 		direction: "vertical",
 		centeredSlides: true,
 		allowTouchMove: false,
