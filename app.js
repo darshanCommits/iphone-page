@@ -26,20 +26,20 @@ document.addEventListener("DOMContentLoaded", () => {
 		},
 	});
 
-
+	let lastActiveSlideIndex = 0;
 	swiper.on('slideChangeTransitionStart', function() {
-		// Add animation class to the previous and active slides
-
-		swiper.slides.forEach(function(slide) {
-			slide.classList.remove('animated-slide');
-		});
-		var prevSlide = swiper.slides[swiper.previousIndex];
-		var nextSlide = swiper.slides[swiper.activeIndex + 1];
 		var activeSlide = swiper.slides[swiper.activeIndex];
+		console.log(swiper.activeIndex)
 
-		prevSlide.classList.add('animated-prev-slide');
-		nextSlide.classList.add('animated-next-slide');
-		activeSlide.classList.add('animated-active-slide');
+		swiper.activeIndex > lastActiveSlideIndex ?
+			activeSlide.classList.add('animated-slide') :
+			activeSlide.classList.add('animated-slide-back');
+
+		setTimeout(_ => {
+			activeSlide.classList.remove('animated-slide');
+			activeSlide.classList.remove('animated-slide-back');
+			lastActiveSlideIndex = swiper.activeIndex;
+		}, 1000)
 	});
 
 

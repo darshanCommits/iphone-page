@@ -266,7 +266,7 @@ h3:last-of-type {
 .swiper-slide-prev {
 	scale: 0.4;
 	transform: translateX(100);
-	opacity: .3;
+	filter: blur(5px);
 }
 
 .swiper-slide-prev.swiper-slide-active {
@@ -294,7 +294,11 @@ h3:last-of-type {
 }
 
 .animated-slide {
-	animation: slideAnimation 1s ease;
+	animation: slideAnimation 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animated-slide-back {
+	animation: slideAnimationBack 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animated-prev-slide {
@@ -312,12 +316,24 @@ h3:last-of-type {
 @keyframes slideAnimation {
 	from {
 		/* Define the starting position for the slide */
-		transform: translateX(100px);
+		transform: translate(-16%, 69%) scale(0.3);
 	}
 
 	to {
 		/* Define the ending position for the slide */
-		transform: translateX(0);
+		transform: translate(0) scale(1);
+	}
+}
+
+@keyframes slideAnimationBack {
+	from {
+		/* Define the starting position for the slide */
+		transform: translate(-16%, -69%) scale(0.3);
+	}
+
+	to {
+		/* Define the ending position for the slide */
+		transform: translate(0) scale(1);
 	}
 }
 
@@ -329,7 +345,7 @@ h3:last-of-type {
 
 	to {
 		/* Define the ending position for the previous slide */
-		transform: translateX(0);
+		transform: translateX(0px);
 	}
 }
 
