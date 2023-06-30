@@ -129,7 +129,7 @@ h3:last-of-type {
 
 .products-container {
 	padding-left: 4vw;
-	overflow-x: hidden;
+	overflow: hidden;
 	width: 100%;
 }
 
@@ -238,7 +238,11 @@ h3:last-of-type {
 }
 
 @media (max-width : 600px) {
-
+	#phoneDes {
+		display: flex;
+		flex-direction: column-reverse;
+		height: 100dvh;
+	}
 
 	:root {
 		--h2Size: 2rem;
@@ -246,12 +250,22 @@ h3:last-of-type {
 		--btnFontSize: .9rem;
 	}
 
+	#info {
+		padding: 2rem 1rem;
+	}
+
 	#info p {
 		width: 80%;
 	}
 
 	.products-container {
-		padding-left: 0;
+		padding: 0;
+		padding-top: 30vh;
+		height: 70vh;
 	}
 
+	.swiper-container {
+		width: inherit;
+		height: inherit;
+	}
 }

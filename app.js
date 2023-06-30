@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	const swiper = new Swiper(".swiper-container", {
 
 		effect: 'custom', // Set the effect to 'custom'
-		intialSlide: 1,
-		slidesPerView: 3,
+		intialSlide: 0,
+		slidesPerView: 1,
 		direction: "vertical",
 		centeredSlides: true,
 		allowTouchMove: false,
