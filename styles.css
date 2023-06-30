@@ -101,8 +101,8 @@ h3:last-of-type {
 }
 
 #image img {
-	max-width: 200px;
-	height: auto;
+	max-height: 30vh;
+	aspect-ratio: 3/5;
 }
 
 @keyframes btmToMidAnim {
@@ -126,7 +126,7 @@ h3:last-of-type {
 }
 
 .products-container {
-	padding-left: 8vw;
+	padding-left: 4vw;
 	overflow-x: hidden;
 	width: 100%;
 }
