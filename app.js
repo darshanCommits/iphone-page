@@ -54,13 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 });
 
-function generateColorHSL(hue, saturation, lightnessArray) {
-	return `
-    radial-gradient(circle at center, ${lightnessArray
-			.map((light) => `hsl(${hue}, ${saturation}, ${light})`)
-			.join(', ')})
-  `;
-}
+const generateColorHSL = (hue, saturation, lightnessArray) =>
+	`radial-gradient(circle at center, ${lightnessArray
+		.map((light) => `hsl(${hue}, ${saturation}, ${light})`)
+		.join(', ')})
+  `
+
 
 function applyDynamicCSS(hue) {
 	const saturation = '20%';

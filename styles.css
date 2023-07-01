@@ -41,8 +41,11 @@ h2 {
 	margin-top: 2rem;
 }
 
+h2 {
+	font-size: var(--h2Size);
+}
+
 #info h3,
-h2,
 div {
 	font-size: var(--h3Size);
 	margin-right: auto;
@@ -50,7 +53,7 @@ div {
 
 #info p {
 	font-size: var(--pSize);
-	width: 80%;
+	width: 75%;
 	margin: 1rem 0;
 	color: rgb(175, 175, 175);
 }
