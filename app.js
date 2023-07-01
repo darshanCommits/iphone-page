@@ -2,7 +2,7 @@ const buttons = [...document.querySelector("#buttons").children];
 const bgColors = {
 	black: 227,
 	purple: 245,
-	gold: 100,
+	gold: 55,
 
 }
 document.addEventListener("DOMContentLoaded", () => {
@@ -54,15 +54,19 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 });
 
+function generateColorHSL(hue, saturation, lightnessArray) {
+	return `
+    radial-gradient(circle at center, ${lightnessArray
+			.map((light) => `hsl(${hue}, ${saturation}, ${light})`)
+			.join(', ')})
+  `;
+}
+
 function applyDynamicCSS(hue) {
 	const saturation = '20%';
 	const lightness = ['50%', '35%', '25%', '20%', '10%'];
 
-	const colorHSL = `
-     radial-gradient(circle at center,
-      ${lightness.map((light) => `hsl(${hue}, ${saturation}, ${light})`).join(', ')}
-    )
-  `;
+	const colorHSL = generateColorHSL(hue, saturation, lightness);
 	document.body.style.backgroundImage = colorHSL;
-}
 
+}
