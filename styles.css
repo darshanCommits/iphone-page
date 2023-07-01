@@ -1,275 +1,252 @@
-* {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-}
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
-:root {
-	--pSize: 1rem;
-	--h2Size: 2.3rem;
-	--h3Size: 1.5rem;
-	--btnFntSize: 1rem;
-	--font-color: white;
-}
-
-@font-face {
-	font-family: "San Francisco";
-	font-weight: 400;
-	src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-}
-
-body {
-	height: 100%;
-	width: 100%;
-	font-family: "San Francisco";
-}
-
-#phoneDes {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	color: var(--font-color);
-}
-
-h2 {
-	font-size: var(--h2Size);
-}
-
-#info {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	padding-left: 8vw;
-}
-
-#info h3:first-of-type {
-	margin-top: 2rem;
-	font-size: var(--h3Size);
-}
-
-#info h3,
-h2,
-div {
-	margin-right: auto;
-}
-
-#info p {
-	font-size: var(--pSize);
-	width: 80%;
-	margin: 1rem 0;
-	color: rgb(175, 175, 175);
-}
-
-h3:last-of-type {
-	margin: 1rem 0;
-}
-
-#buttons {
-	display: flex;
-}
-
-#info button {
-	display: inline-block;
-	padding: 10px 28px;
-	font-size: var(--btnFntSize);
-	font-weight: bold;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 4px;
-	background-color: transparent;
-	color: white;
-	border: 1px solid gray;
-	cursor: pointer;
-	margin: 0.1rem;
-}
-
-#info button:nth-of-type(1):hover {
-	background-color: #444341;
-}
-
-#info button:nth-of-type(2):hover {
-	background-color: #0e362c;
-}
-
-#info button:nth-of-type(3):hover {
-	background-color: #4a4251;
-}
-
-#info button:hover {
-	background-color: #0c0c0ce5;
-}
-
-#info button:active {
-	background-color: #1f618d;
-}
-
-#image img {
-	max-height: 30vh;
-	aspect-ratio: 3/5;
-}
-
-@keyframes btmToMidAnim {
-	0% {
-		transform: scale(0.2) rotate(90deg) translate(300px) rotate(-90deg) translateX(300px) translate(-50%, -50%);
+	* {
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
 	}
 
-	100% {
-		transform: scale(1) rotate(180deg) translate(300px) rotate(-180deg) translateX(300px) translate(-50%, -50%);
-	}
-}
-
-.swiper-container {
-	width: 100vw;
-	height: 100vh;
-}
-
-.swiper-wrapper {
-	width: 100%;
-	height: 100%;
-}
-
-.products-container {
-	padding-left: 4vw;
-	overflow: hidden;
-	width: 100%;
-}
-
-#image .swiper-wrapper .swiper-slide {
-	display: flex;
-	position: relative;
-	transition: transform 0.3s ease;
-}
-
-.swiper-slide-active {
-	scale: 1.5;
-	left: 30vw;
-	animation-duration: 1s;
-	transform: translateX(0);
-	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	animation-fill-mode: forwards;
-}
-
-.swiper-slide-next,
-.swiper-slide-prev {
-	scale: 0.4;
-	transform: translateX(100);
-	filter: blur(5px);
-}
-
-.swiper-slide-prev.swiper-slide-active {
-	transform: translateX(0);
-}
-
-.animated-slide {
-	animation: slideAnimation 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.animated-slide-back {
-	animation: slideAnimationBack 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes slideAnimation {
-	from {
-		/* Define the starting position for the slide */
-		transform: translate(-16%, 69%) scale(0.3);
+	:root {
+		--pSize: 1rem;
+		--h2Size: 2.3rem;
+		--h3Size: 1.5rem;
+		--btnFntSize: 1rem;
+		--font-color: white;
 	}
 
-	to {
-		/* Define the ending position for the slide */
-		transform: translate(0) scale(1);
-	}
-}
 
-@keyframes slideAnimationBack {
-	from {
-		/* Define the starting position for the slide */
-		transform: translate(-16%, -69%) scale(0.3);
+	body {
+		height: 100%;
+		width: 100%;
+		font-family: 'Montserrat', sans-serif;
 	}
 
-	to {
-		/* Define the ending position for the slide */
-		transform: translate(0) scale(1);
-	}
-}
-
-@media (max-width: 768px) {
-
-	.swiper-slide-next,
-	.swiper-slide-prev {
-		visibility: hidden;
+	#phoneDes {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		color: var(--font-color);
 	}
 
-	.products-container {
-		padding-left: 0vw;
+	h2 {
+		font-size: var(--h2Size);
+	}
+
+	#info {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		padding-left: 8vw;
+	}
+
+	#info h3:first-of-type {
+		margin-top: 2rem;
+		font-size: var(--h3Size);
+	}
+
+	#info h3,
+	h2,
+	div {
+		margin-right: auto;
 	}
 
 	#info p {
-		max-width: 100%;
+		font-size: var(--pSize);
+		width: 80%;
+		margin: 1rem 0;
+		color: rgb(175, 175, 175);
+	}
+
+	h3:last-of-type {
+		margin: 1rem 0;
+	}
+
+	#buttons {
+		display: flex;
+	}
+
+	#info button {
+		display: inline-block;
+		padding: 10px 28px;
+		font-size: var(--btnFntSize);
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 4px;
+		background-color: transparent;
+		color: white;
+		border: 1px solid gray;
+		cursor: pointer;
+		margin: 0.1rem;
+	}
+
+	#info button:nth-of-type(1):hover {
+		background-color: #444341;
+	}
+
+	#info button:nth-of-type(2):hover {
+		background-color: #0e362c;
+	}
+
+	#info button:nth-of-type(3):hover {
+		background-color: #4a4251;
+	}
+
+	#info button:hover {
+		background-color: #0c0c0ce5;
+	}
+
+	#info button:active {
+		background-color: #1f618d;
+	}
+
+	#image img {
+		max-height: 30vh;
+		aspect-ratio: 3/5;
+	}
+
+	.swiper-container {
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.swiper-wrapper {
+		width: 100%;
+		height: 100%;
+	}
+
+	.products-container {
+		padding-left: 4vw;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	#image .swiper-wrapper .swiper-slide {
+		display: flex;
+		transition: transform 0.3s ease;
+	}
+
+	.swiper-slide-active {
+		scale: 1.5;
+		left: 30vw;
+		animation-duration: 1s;
+		transform: translateX(0);
+		animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		animation-fill-mode: forwards;
+	}
+
+	.swiper-slide-next,
+	.swiper-slide-prev {
+		scale: 0.4;
+		transform: translateX(100);
+		filter: blur(5px);
+	}
+
+	.swiper-slide-prev.swiper-slide-active {
+		transform: translateX(0);
+	}
+
+	.animated-slide {
+		animation: slideAnimation 1s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.animated-slide-back {
+		animation: slideAnimationBack 1s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	@keyframes slideAnimation {
 		from {
-			transform: scale(0.3);
+			/* Define the starting position for the slide */
+			transform: translate(-16%, 69%) scale(0.3);
 		}
 
 		to {
-			transform: scale(1);
+			/* Define the ending position for the slide */
+			transform: translate(0) scale(1);
 		}
 	}
 
 	@keyframes slideAnimationBack {
 		from {
-			transform: scale(0.3);
+			/* Define the starting position for the slide */
+			transform: translate(-16%, -69%) scale(0.3);
 		}
 
 		to {
-			transform: scale(1);
+			/* Define the ending position for the slide */
+			transform: translate(0) scale(1);
 		}
 	}
-}
 
+	@media (max-width: 768px) {
 
-@media (max-width : 680px) {
-	:root {
-		--pSize: .8rem;
-		--h2Size: 2rem;
-		--h3Size: 1.3rem;
-		--btnFontSize: .5rem;
-	}
-}
+		.swiper-slide-next,
+		.swiper-slide-prev {
+			visibility: hidden;
+		}
 
-@media (max-width : 600px) {
-	#phoneDes {
-		display: flex;
-		flex-direction: column-reverse;
-		height: 100dvh;
-	}
+		.products-container {
+			padding-left: 0vw;
+		}
 
-	:root {
-		--h2Size: 2rem;
-		--h3Size: 1.3rem;
-		--btnFontSize: .9rem;
+		#info p {
+			max-width: 100%;
+		}
+
 	}
 
-	#info {
-		padding: 2rem 1rem;
+
+	@media (max-width : 680px) {
+		:root {
+			--pSize: .8rem;
+			--h2Size: 2rem;
+			--h3Size: 1.3rem;
+			--btnFontSize: .5rem;
+		}
 	}
 
-	#info p {
-		width: 80%;
-	}
+	@media (max-width : 600px) {
+		#phoneDes {
+			display: flex;
+			flex-direction: column-reverse;
+			height: 100dvh;
+		}
 
-	.products-container {
-		padding: 0;
-		padding-top: 30vh;
-		height: 50vh;
-	}
+		:root {
+			--h2Size: 2rem;
+			--h3Size: 1.3rem;
+			--btnFontSize: .9rem;
+		}
 
-	.swiper-container {
-		width: inherit;
-		height: inherit;
-	}
+		#info {
 
-	#image img {
-		transform: translateY(-70px);
+			margin: 2rem 0;
+			align-items: center;
+		}
+
+		#info p {
+			margin-right: auto;
+		}
+
+		.swiper-slide {
+			justify-content: center;
+		}
+
+		.swiper-slide-active {
+			left: 0;
+		}
+
+		.products-container {
+			padding: 0;
+			padding-top: 30vh;
+			height: 50vh;
+		}
+
+		.swiper-container {
+			width: inherit;
+			height: inherit;
+		}
+
+		#image img {
+			transform: translateY(-70px);
+		}
 	}
-}

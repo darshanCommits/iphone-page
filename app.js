@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		effect: 'custom', // Set the effect to 'custom'
 		intialSlide: 0,
 		slidesPerView: window.matchMedia("(min-width: 600px)").matches ? 3 : 1,
-		direction: "vertical",
+		direction: window.matchMedia("(min-width: 600px)").matches ? "vertical" : "horizontal",
 		centeredSlides: true,
 		allowTouchMove: false,
 		navigation: {
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	let lastActiveSlideIndex = 0;
+	// if (window.matchMedia("(max-width: 600px)")) {
 	swiper.on('slideChangeTransitionStart', function() {
 		var activeSlide = swiper.slides[swiper.activeIndex];
 		console.log(swiper.activeIndex)
