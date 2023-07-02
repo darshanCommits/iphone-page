@@ -1,31 +1,42 @@
+const info = document.querySelector("#infoText");
 const buttons = [...document.querySelector("#buttons").children];
-const title = document.querySelector("#title");
-const heading = document.querySelector("#heading");
-const para = document.querySelector("#para");
+
 
 let prevDev = "iPhone";
+const getHtmlMarkup = (device) => {
+  const deviceText = textToRender[device];
+  const heading = deviceText.heading;
+  const para = deviceText.para;
+
+  return `<div id="infoText">
+      <h2><img src="./apple-icon.svg" /> <span id="title">${device}</span></h2>
+      <h3 id="heading">${heading}</h3>
+      <p id="para">${para}</p>
+   </div>`
+};
+
+
 function updateTextContent(device) {
   if (prevDev === device) return;
-  console.log(prevDev);
-  const deviceText = textToRender[device];
-  const info = document.querySelector("#info");
-  info.classList.add("fade-in");
+  const infoParent = info.parentElement;
+  const html = getHtmlMarkup(device);
+  infoParent.classList.add("fade-in");
 
   setTimeout(() => {
-    info.classList.remove("fade-in");
-    info.classList.add("ease-in");
-    title.textContent = device;
-    heading.textContent = deviceText.heading;
-    para.textContent = deviceText.para;
+    infoParent.classList.remove("fade-in");
+    infoParent.classList.add("ease-in");
+    info.innerHTML = html;
   }, 400);
+
   prevDev = device;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   applyDynamicCSS(bgColors.black);
+  info.innerHTML = getHtmlMarkup("iPhone");
   const swiper = new Swiper(".swiper-container", {
 
-    effect: 'custom', // Set the effect to 'custom'
+    effect: 'custom',
     intialSlide: 1,
     slidesPerView: window.matchMedia("(min-width: 600px)").matches ? 3 : 1,
     direction: window.matchMedia("(min-width: 600px)").matches ? "vertical" : "horizontal",
@@ -38,10 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   let lastActiveSlideIndex = 0;
-  // if (window.matchMedia("(max-width: 600px)")) {
   swiper.on('slideChangeTransitionStart', function() {
     var activeSlide = swiper.slides[swiper.activeIndex];
-    console.log(swiper.activeIndex);
 
     swiper.activeIndex > lastActiveSlideIndex ?
       activeSlide.classList.add('animated-slide') :
