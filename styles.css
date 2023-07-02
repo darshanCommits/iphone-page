@@ -37,6 +37,20 @@ h2 {
 	padding-left: 8vw;
 }
 
+#heading {
+	width: 70%;
+}
+
+.fade-in {
+	opacity: 0;
+	transition: opacity 0.2s ease-out;
+}
+
+.ease-in {
+	transition: opacity 0.2s ease-in;
+}
+
+
 #info h3:first-of-type {
 	margin-top: 2rem;
 }
@@ -64,6 +78,17 @@ h3:last-of-type {
 
 #buttons {
 	display: flex;
+	flex-wrap: wrap;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.1rem;
+}
+
+#buttons button {
+	flex: 1;
+}
+
+#button:last-child {
+	flex-basis: 100%;
 }
 
 #black:hover {
@@ -131,7 +156,7 @@ h3:last-of-type {
 .swiper-slide-prev {
 	scale: 0.4;
 	transform: translateX(100);
-	filter: blur(5px);
+	filter: blur(9px);
 }
 
 .swiper-slide-prev.swiper-slide-active {
@@ -170,6 +195,7 @@ h3:last-of-type {
 	}
 }
 
+
 @media (max-width: 768px) {
 
 	.swiper-slide-next,
@@ -183,6 +209,21 @@ h3:last-of-type {
 
 	#info p {
 		max-width: 100%;
+	}
+
+	#info h3,
+	p,
+	div {
+		margin: 0;
+	}
+
+	#image img {
+		transform: translateX(-38px) scale(0.9);
+	}
+
+	#info {
+		align-content: center;
+		flex-wrap: wrap;
 	}
 }
 
