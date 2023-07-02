@@ -1,20 +1,18 @@
 const info = document.querySelector("#infoText");
 const buttons = [...document.querySelector("#buttons").children];
-
-
 let prevDev = "iPhone";
+
 const getHtmlMarkup = (device) => {
   const deviceText = textToRender[device];
   const heading = deviceText.heading;
   const para = deviceText.para;
 
-  return `<div id="infoText">
+  return `
       <h2><img src="./apple-icon.svg" /> <span id="title">${device}</span></h2>
       <h3 id="heading">${heading}</h3>
       <p id="para">${para}</p>
-   </div>`
+        `
 };
-
 
 function updateTextContent(device) {
   if (prevDev === device) return;
@@ -34,8 +32,8 @@ function updateTextContent(device) {
 document.addEventListener("DOMContentLoaded", () => {
   applyDynamicCSS(bgColors.black);
   info.innerHTML = getHtmlMarkup("iPhone");
-  const swiper = new Swiper(".swiper-container", {
 
+  const swiper = new Swiper(".swiper-container", {
     effect: 'custom',
     intialSlide: 1,
     slidesPerView: window.matchMedia("(min-width: 600px)").matches ? 3 : 1,
@@ -49,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   let lastActiveSlideIndex = 0;
-  swiper.on('slideChangeTransitionStart', function() {
+  swiper.on('slideChangeTransitionStart', () => {
     var activeSlide = swiper.slides[swiper.activeIndex];
 
     swiper.activeIndex > lastActiveSlideIndex ?
@@ -67,8 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       const color = button.id;
       const device = button.getAttribute("data-device");
+
       updateTextContent(device);
       applyDynamicCSS(bgColors[color]);
+
       const slideIndex = parseInt(button.getAttribute("data-slide"));
       swiper.slideTo(slideIndex);
     });

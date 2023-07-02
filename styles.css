@@ -83,6 +83,10 @@ h3:last-of-type {
 	gap: 0.1rem;
 }
 
+#button button:hover {
+	background-color: red;
+}
+
 #buttons button {
 	flex: 1;
 }
@@ -90,7 +94,6 @@ h3:last-of-type {
 #button:last-child {
 	flex-basis: 100%;
 }
-
 
 #info button {
 	display: inline-block;
