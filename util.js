@@ -1,22 +1,19 @@
-
-// utils.js
-
 const textToRender = {
   iPhone: {
-    heading: "Réparation iPhone à Paris",
-    para: "Faites confiance à nos experts en réparation pour iPhone à Paris."
+    heading: "Comptez sur notre service de réparation d'iPhone à Paris.",
+    para: "Faites confiance à nos experts qualifiés en réparation d'iPhone à Paris qui sont là pour vous offrir un service fiable et professionnel."
   },
   iWatch: {
     heading: "Service de réparation iWatch à Paris",
     para: "Notre équipe d'experts est dédiée à la réparation des montres iWatch à Paris. Confiez-nous votre iWatch et nous la réparerons de manière rapide et efficace."
   },
   iPad: {
-    heading: "Réparation iPad à Paris",
+    heading: "Confiez la réparation de votre iPad à notre service à Paris",
     para: "SOSmaster vous propose de faire une réparation de votre tablette iPad à Paris. SOSmaster s’en charge au plus vite."
   },
   MacBook: {
     heading: "Réparation de votre Macbook Pro et Macbook Air à Paris",
-    para: "Pour toute information sur la réparation de votre MacBook Pro et Macbook Air, n’hésitez pas à nous contacter. Nous sommes là pour vous aider et répondre à toutes vos questions."
+    para: "Si vous avez des questions sur la réparation de votre MacBook Pro et MacBook Air, contactez-nous. Nous sommes là pour vous aider et répondre à toutes vos questions."
   },
   iMac: {
     heading: "Réparation iMac à Paris",

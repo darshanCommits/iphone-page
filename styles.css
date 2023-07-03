@@ -24,6 +24,7 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	color: var(--font-color);
+	place-items: center;
 }
 
 h2 {
@@ -31,10 +32,11 @@ h2 {
 }
 
 #info {
+	padding-left: 8vw;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	flex-direction: column;
-	padding-left: 8vw;
 }
 
 #heading {
@@ -76,10 +78,17 @@ h3:last-of-type {
 	margin: 1rem 0;
 }
 
+#infoText {
+	flex: 0 0 auto;
+	min-height: 250px;
+}
+
 #buttons {
+	height: 40px;
+	margin-top: 1rem;
 	display: flex;
 	flex-wrap: wrap;
-	grid-template-columns: repeat(2, 1fr);
+	flex: 0 0 auto;
 	gap: 0.1rem;
 }
 
@@ -190,6 +199,13 @@ h3:last-of-type {
 
 @media (max-width: 768px) {
 
+	:root {
+		--h2Size: 2rem !important;
+		--h3Size: 1.3rem !important;
+		--pSize: 0.8rem !important;
+		--btnFntSize: 0.9rem !important;
+	}
+
 	.swiper-slide-next,
 	.swiper-slide-prev {
 		visibility: hidden;
@@ -247,12 +263,19 @@ h3:last-of-type {
 	}
 
 	#info {
-		margin: 2rem 0;
+		padding: 0 1rem;
+		margin: 0 0 2rem;
 		align-items: center;
 	}
 
-	#info p {
-		margin-right: auto;
+	#infoText {
+		min-height: 20vh;
+
+	}
+
+	#info #infoText h2,
+	#info #infoText h3 {
+		width: 90%;
 	}
 
 	.swiper-slide {

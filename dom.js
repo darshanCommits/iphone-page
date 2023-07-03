@@ -18,11 +18,11 @@ function updateTextContent(device) {
   if (prevDev === device) return;
   const infoParent = info.parentElement;
   const html = getHtmlMarkup(device);
-  infoParent.classList.add("fade-in");
+  info.classList.add("fade-in");
 
   setTimeout(() => {
-    infoParent.classList.remove("fade-in");
-    infoParent.classList.add("ease-in");
+    info.classList.remove("fade-in");
+    info.classList.add("ease-in");
     info.innerHTML = html;
   }, 400);
 
