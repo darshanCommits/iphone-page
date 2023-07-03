@@ -13,7 +13,7 @@ const textToRender = {
   },
   MacBook: {
     heading: "Réparation de votre Macbook Pro et Macbook Air à Paris",
-    para: "Si vous avez des questions sur la réparation de votre MacBook Pro et MacBook Air, contactez-nous. Nous sommes là pour vous aider et répondre à toutes vos questions."
+    para: "Contactez-nous pour toute question sur la réparation de votre MacBook. Nous sommes là pour vous aider."
   },
   iMac: {
     heading: "Réparation iMac à Paris",
@@ -26,6 +26,7 @@ const bgColors = {
   red: 335,
   green: 140,
   cyan: 180,
+  purple: 290,
 };
 
 const getDeviceNameArray = (elem) => elem.map((x) => x.getAttribute("data-device"));
