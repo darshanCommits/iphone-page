@@ -45,11 +45,14 @@ h2 {
 
 .fade-in {
 	opacity: 0;
-	transition: opacity 0.2s ease-out;
+	transition: opacity 0.3s ease-out;
 }
 
 .ease-in {
-	transition: opacity 0.2s ease-in;
+	opacity: 1;
+	transition: opacity 0.3s ease-in;
+	display: flex;
+	flex-direction: column;
 }
 
 
@@ -79,6 +82,8 @@ h3:last-of-type {
 }
 
 #infoText {
+	display: flex;
+	flex-direction: column;
 	flex: 0 0 auto;
 	min-height: 250px;
 }
@@ -174,24 +179,20 @@ h3:last-of-type {
 
 @keyframes slideAnimation {
 	from {
-		/* Define the starting position for the slide */
 		transform: translate(-16%, 69%) scale(0.3);
 	}
 
 	to {
-		/* Define the ending position for the slide */
 		transform: translate(0) scale(1);
 	}
 }
 
 @keyframes slideAnimationBack {
 	from {
-		/* Define the starting position for the slide */
 		transform: translate(-16%, -69%) scale(0.3);
 	}
 
 	to {
-		/* Define the ending position for the slide */
 		transform: translate(0) scale(1);
 	}
 }
@@ -250,6 +251,30 @@ h3:last-of-type {
 }
 
 @media (max-width : 600px) {
+
+	@keyframes slideAnimation {
+		from {
+			transform: scale(0.3);
+		}
+
+		to {
+			transform: scale(1);
+		}
+	}
+
+	@keyframes slideAnimationBack {
+		from {
+			transform: scale(0.3);
+		}
+
+		to {
+			transform: scale(1);
+		}
+	}
+
+
+
+
 	#phoneDes {
 		display: flex;
 		flex-direction: column-reverse;

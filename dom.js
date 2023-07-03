@@ -16,15 +16,16 @@ const getHtmlMarkup = (device) => {
 
 function updateTextContent(device) {
   if (prevDev === device) return;
-  const infoParent = info.parentElement;
   const html = getHtmlMarkup(device);
+  info.classList.remove("ease-in");
   info.classList.add("fade-in");
 
   setTimeout(() => {
     info.classList.remove("fade-in");
     info.classList.add("ease-in");
-    info.innerHTML = html;
-  }, 400);
+    info.innerHTML = html
+  }, 300)
+
 
   prevDev = device;
 }
