@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const swiper = new Swiper(".swiper-container", {
     effect: 'custom',
-    intialSlide: 1,
+    intialSlide: 0,
     slidesPerView: window.matchMedia("(min-width: 600px)").matches ? 3 : 1,
     direction: window.matchMedia("(min-width: 600px)").matches ? "vertical" : "horizontal",
     centeredSlides: true,
