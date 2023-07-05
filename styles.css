@@ -105,7 +105,9 @@ h3:last-of-type {
 	background-color: hsl(227, 10%, 55%);
 }
 
-
+#buttons button:focus {
+	outline: 1px solid white;
+}
 
 #buttons button {
 	flex: 1;
