@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Orbit&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -11,11 +11,17 @@
 	--h2Size: 2.3rem;
 	--h3Size: 1.5rem;
 	--btnFntSize: 1rem;
-	--font-color: white;
+	--font-color: #FAEBD7;
 }
 
 header {
-	color: white;
+	height: 100px;
+	color: #E84545;
+	font-family: orbit;
+	position: fixed;
+	top: 4%;
+	left: 6%;
+	right: 0;
 }
 
 body {
@@ -92,6 +98,7 @@ h3:last-of-type {
 
 #buttons {
 	height: 40px;
+	color: #FAEBD7;
 	margin-top: 1rem;
 	display: flex;
 	flex-wrap: wrap;
