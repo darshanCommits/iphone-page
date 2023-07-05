@@ -97,9 +97,15 @@ h3:last-of-type {
 	gap: 0.1rem;
 }
 
-#button button:hover {
-	background-color: red;
+#buttons button:hover {
+	background-color: hsl(227, 10%, 35%);
 }
+
+#buttons button:active {
+	background-color: hsl(227, 10%, 55%);
+}
+
+
 
 #buttons button {
 	flex: 1;
