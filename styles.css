@@ -14,6 +14,10 @@
 	--font-color: white;
 }
 
+header {
+	color: white;
+}
+
 body {
 	height: 100%;
 	width: 100%;
@@ -328,6 +332,11 @@ h3:last-of-type {
 	#info p {
 		margin: 0;
 		margin-top: 1rem;
+	}
+
+	#phoneDes #info #buttons {
+		height: auto;
+		margin-bottom: 1rem;
 	}
 
 	.swiper-slide {

@@ -17,7 +17,7 @@ const textToRender = {
   },
   "Data Recovery" : {
     heading : "SOSmaster spécialiste en récupération de données à Paris",
-    para :"Récupération de données sur différents appareils : HDD, PC, iMac, Macbook, clé USB, carte SD, SSD, téléphone, tablette, iPhone, iPad, disque SAS et Freebox."    
+    para :"Récupération de données sur différents appareils : HDD, PC, iMac, Macbook, clé USB, carte SD, SSD, téléphone, tablette, iPhone, iPad, disque SAS et Freebox."
   },
   Computer : {
     heading:"Réparation pour ordinateur à Paris",
@@ -54,7 +54,7 @@ const getHtmlMarkup = (device) => {
   const para = deviceText.para;
 
   return `
-      <h2><img src="./apple-icon.svg" /> <span id="title">${device}</span></h2>
+      <h2 id="title">${device}</h2>
       <h3 id="heading">${heading}</h3>
       <p id="para">${para}</p>
         `
