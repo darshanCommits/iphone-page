@@ -3,10 +3,6 @@ const textToRender = {
     heading: "Comptez sur notre service de réparation d'iPhone à Paris.",
     para: "Faites confiance à nos experts qualifiés en réparation d'iPhone à Paris qui sont là pour vous offrir un service fiable et professionnel."
   },
-  iWatch: {
-    heading: "Service de réparation iWatch à Paris",
-    para: "Notre équipe d'experts est dédiée à la réparation des montres iWatch à Paris. Confiez-nous votre iWatch et nous la réparerons de manière rapide et efficace."
-  },
   iPad: {
     heading: "Confiez la réparation de votre iPad à notre service à Paris",
     para: "SOSmaster vous propose de faire une réparation de votre tablette iPad à Paris. SOSmaster s’en charge au plus vite."
@@ -27,6 +23,34 @@ const bgColors = {
   green: 140,
   cyan: 180,
   purple: 290,
+};
+
+function updateTextContent(device) {
+  if (prevDev === device) return;
+  const html = getHtmlMarkup(device);
+  info.classList.remove("ease-in");
+  info.classList.add("fade-in");
+
+  setTimeout(() => {
+    info.classList.remove("fade-in");
+    info.classList.add("ease-in");
+    info.innerHTML = html
+  }, 300)
+
+
+  prevDev = device;
+}
+
+const getHtmlMarkup = (device) => {
+  const deviceText = textToRender[device];
+  const heading = deviceText.heading;
+  const para = deviceText.para;
+
+  return `
+      <h2><img src="./apple-icon.svg" /> <span id="title">${device}</span></h2>
+      <h3 id="heading">${heading}</h3>
+      <p id="para">${para}</p>
+        `
 };
 
 const getDeviceNameArray = (elem) => elem.map((x) => x.getAttribute("data-device"));

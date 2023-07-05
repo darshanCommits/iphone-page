@@ -2,34 +2,6 @@ const info = document.querySelector("#infoText");
 const buttons = [...document.querySelector("#buttons").children];
 let prevDev = "iPhone";
 
-const getHtmlMarkup = (device) => {
-  const deviceText = textToRender[device];
-  const heading = deviceText.heading;
-  const para = deviceText.para;
-
-  return `
-      <h2><img src="./apple-icon.svg" /> <span id="title">${device}</span></h2>
-      <h3 id="heading">${heading}</h3>
-      <p id="para">${para}</p>
-        `
-};
-
-function updateTextContent(device) {
-  if (prevDev === device) return;
-  const html = getHtmlMarkup(device);
-  info.classList.remove("ease-in");
-  info.classList.add("fade-in");
-
-  setTimeout(() => {
-    info.classList.remove("fade-in");
-    info.classList.add("ease-in");
-    info.innerHTML = html
-  }, 300)
-
-
-  prevDev = device;
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   applyDynamicCSS(bgColors.black);
   info.innerHTML = getHtmlMarkup("iPhone");
