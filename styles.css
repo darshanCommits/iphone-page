@@ -40,19 +40,17 @@ h2 {
 }
 
 #heading {
-	width: 70%;
+	width: 90%;
 }
 
-.fade-in {
+.fade-out {
 	opacity: 0;
 	transition: opacity 0.3s ease-out;
 }
 
-.ease-in {
+.fade-in {
 	opacity: 1;
 	transition: opacity 0.3s ease-in;
-	display: flex;
-	flex-direction: column;
 }
 
 
@@ -72,7 +70,7 @@ div {
 
 #info p {
 	font-size: var(--pSize);
-	width: 75%;
+	width: 80%;
 	margin: 1rem 0;
 	or: rgb(175, 175, 175);
 }
@@ -138,12 +136,13 @@ h3:last-of-type {
 }
 
 #image img {
-	max-height: 30vh;
+	max-height: 30dvh;
 }
 
 .swiper-container {
 	width: 100vw;
-	height: 100vh;
+	height: 100dvh;
+
 }
 
 .swiper-wrapper {
@@ -309,7 +308,7 @@ h3:last-of-type {
 	}
 
 	#infoText {
-		min-height: 20vh;
+		min-height: 20dvh;
 	}
 
 	#infoText,
@@ -341,8 +340,8 @@ h3:last-of-type {
 
 	.products-container {
 		padding: 0;
-		padding-top: 30vh;
-		height: 50vh;
+		padding-top: 30dvh;
+		height: 50dvh;
 	}
 
 	.swiper-container {

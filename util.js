@@ -15,6 +15,14 @@ const textToRender = {
     heading: "Réparation iMac à Paris",
     para: "La réparation d’iMac est un processus de réparation, de restauration ou de remplacement du matériel et des logiciels de votre iMac."
   },
+  "Data Recovery" : {
+    heading : "SOSmaster spécialiste en récupération de données à Paris",
+    para :"Récupération de données sur différents appareils : HDD, PC, iMac, Macbook, clé USB, carte SD, SSD, téléphone, tablette, iPhone, iPad, disque SAS et Freebox."    
+  },
+  Computer : {
+    heading:"Réparation pour ordinateur à Paris",
+    para :"Faites confiance à nos experts en réparation d’ordinateur à Paris."  
+  },
 };
 
 const bgColors = {
@@ -27,17 +35,16 @@ const bgColors = {
 
 function updateTextContent(device) {
   if (prevDev === device) return;
+
   const html = getHtmlMarkup(device);
-  info.classList.remove("ease-in");
-  info.classList.add("fade-in");
+    info.classList.remove("fade-in");
+    info.classList.add("fade-out");
 
   setTimeout(() => {
-    info.classList.remove("fade-in");
-    info.classList.add("ease-in");
-    info.innerHTML = html
+    info.classList.remove("fade-out");
+    info.classList.add("fade-in");
+    info.innerHTML = html;    
   }, 300)
-
-
   prevDev = device;
 }
 
