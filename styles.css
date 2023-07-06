@@ -1,380 +1,379 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Orbit&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Orbit&display=swap");
 
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 :root {
-	--pSize: 1rem;
-	--h1Size: 2rem;
-	--h2Size: 2.3rem;
-	--h3Size: 1.5rem;
-	--btnFntSize: 1rem;
-	--font-color: #FAEBD7;
+  --pSize: 1rem;
+  --h1Size: 2rem;
+  --h2Size: 2.3rem;
+  --h3Size: 1.5rem;
+  --btnFntSize: 1rem;
+  --font-color: #faebd7;
 }
 
 header {
-	top: 6%;
-	left: 6%;
-	height: 30px;
-	color: #E84545;
-	font-family: orbit;
-	position: fixed;
+  top: 6%;
+  left: 6%;
+  height: 30px;
+  color: #e84545;
+  font-family: orbit;
+  position: fixed;
 }
 
 body {
-	height: 100%;
-	width: 100%;
-	font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
 }
 
 #phoneDes {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	color: var(--font-color);
-	place-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: var(--font-color);
+  place-items: center;
 }
 
 h2 {
-	font-size: var(--h2Size);
+  font-size: var(--h2Size);
 }
 
 #info {
-	padding-left: 8vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+  padding-left: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #heading {
-	width: 90%;
+  width: 90%;
 }
 
 .fade-out {
-	opacity: 0;
-	transition: opacity 0.3s ease-out;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
 }
 
 .fade-in {
-	opacity: 1;
-	transition: opacity 0.3s ease-in;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
 }
 
-
 #info h3:first-of-type {
-	margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 h2 {
-	font-size: var(--h2Size);
+  font-size: var(--h2Size);
 }
 
 #info h3,
 div {
-	font-size: var(--h3Size);
-	margin-right: auto;
+  font-size: var(--h3Size);
+  margin-right: auto;
 }
 
 #info p {
-	font-size: var(--pSize);
-	width: 80%;
-	margin: 1rem 0;
-	or: rgb(175, 175, 175);
+  font-size: var(--pSize);
+  width: 80%;
+  margin: 1rem 0;
+  or: rgb(175, 175, 175);
 }
 
 h3:last-of-type {
-	margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 #infoText {
-	display: flex;
-	flex-direction: column;
-	flex: 0 0 auto;
-	min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  min-height: 250px;
 }
 
 #buttons {
-	height: 40px;
-	color: #FAEBD7;
-	margin-top: 1rem;
-	display: flex;
-	flex-wrap: wrap;
-	flex: 0 0 auto;
-	gap: 0.1rem;
+  height: 40px;
+  color: #faebd7;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+  gap: 0.1rem;
 }
 
 #buttons button:hover {
-	background-color: hsl(227, 10%, 35%);
+  background-color: hsl(227, 10%, 35%);
 }
 
 #buttons button:active {
-	background-color: hsl(227, 10%, 55%);
+  background-color: hsl(227, 10%, 55%);
 }
 
 #buttons button:focus {
-	outline: 1px solid white;
+  outline: 1px solid white;
 }
 
 #buttons button {
-	flex: 1;
+  flex: 1;
 }
 
 #button:last-child {
-	flex-basis: 100%;
+  flex-basis: 100%;
 }
 
 #info button {
-	display: inline-block;
-	padding: 10px 28px;
-	font-size: var(--btnFntSize);
-	font-weight: bold;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 3px;
-	background-color: transparent;
+  display: inline-block;
+  padding: 10px 28px;
+  font-size: var(--btnFntSize);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: transparent;
 
-	#info #infoText #heading {
-		margin-top: 1rem;
-	}
+  #info #infoText #heading {
+    margin-top: 1rem;
+  }
 
-	color: white;
-	border: 1px solid gray;
-	cursor: pointer;
-	margin: 0.1rem;
+  color: white;
+  border: 1px solid gray;
+  cursor: pointer;
+  margin: 0.1rem;
 }
 
 #image img {
-	max-height: 30dvh;
+  max-height: 30dvh;
 }
 
 .swiper-container {
-	width: 100vw;
-	height: 100dvh;
-
+  width: 100vw;
+  height: 100dvh;
 }
 
 .swiper-wrapper {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .products-container {
-	padding-left: 4vw;
-	overflow: hidden;
-	width: 100%;
+  padding-left: 4vw;
+  overflow: hidden;
+  width: 100%;
 }
 
 #image .swiper-wrapper .swiper-slide {
-	display: flex;
-	transition: transform 0.3s ease;
+  display: flex;
+  transition: transform 0.3s ease;
 }
 
 .swiper-slide-active {
-	scale: 1.5;
-	left: 30vw;
-	animation-duration: 1s;
-	transform: translateX(0);
-	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	animation-fill-mode: forwards;
+  scale: 1.5;
+  left: 30vw;
+  animation-duration: 1s;
+  transform: translateX(0);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: forwards;
 }
 
 .swiper-slide-next,
 .swiper-slide-prev {
-	scale: 0.4;
-	transform: translateX(100);
-	filter: blur(9px);
+  scale: 0.4;
+  transform: translateX(100);
+  filter: blur(9px);
 }
 
 .swiper-slide-prev.swiper-slide-active {
-	transform: translateX(0);
+  transform: translateX(0);
 }
 
 .animated-slide {
-	animation: slideAnimation 1s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideAnimation 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animated-slide-back {
-	#info p {
-		margin: 0;
-		margin-top: 1rem;
-	}
+  #info p {
+    margin: 0;
+    margin-top: 1rem;
+  }
 
-	animation: slideAnimationBack 1s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideAnimationBack 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes slideAnimation {
-	from {
-		transform: translate(-16%, 69%) scale(0.3);
-	}
+  from {
+    transform: translate(-16%, 69%) scale(0.3);
+  }
 
-	to {
-		transform: translate(0) scale(1);
-	}
+  to {
+    transform: translate(0) scale(1);
+  }
 }
 
 @keyframes slideAnimationBack {
-	from {
-		transform: translate(-16%, -69%) scale(0.3);
-	}
+  from {
+    transform: translate(-16%, -69%) scale(0.3);
+  }
 
-	to {
-		transform: translate(0) scale(1);
-	}
+  to {
+    transform: translate(0) scale(1);
+  }
 }
-
 
 @media (max-width: 768px) {
+  :root {
+    --h2Size: 2rem !important;
+    --h3Size: 1.3rem !important;
+    --pSize: 0.8rem !important;
+    --btnFntSize: 0.9rem !important;
+  }
 
-	:root {
-		--h2Size: 2rem !important;
-		--h3Size: 1.3rem !important;
-		--pSize: 0.8rem !important;
-		--btnFntSize: 0.9rem !important;
-	}
+  .swiper-slide-next,
+  .swiper-slide-prev {
+    visibility: hidden;
+  }
 
-	.swiper-slide-next,
-	.swiper-slide-prev {
-		visibility: hidden;
-	}
+  .products-container {
+    padding-left: 0vw;
+  }
 
-	.products-container {
-		padding-left: 0vw;
-	}
+  #info p {
+    max-width: 100%;
+  }
 
-	#info p {
-		max-width: 100%;
-	}
+  #info h3,
+  p,
+  div {
+    margin: 0;
+  }
 
-	#info h3,
-	p,
-	div {
-		margin: 0;
-	}
+  #image img {
+    transform: translateX(-38px) scale(0.9);
+  }
 
-	#image img {
-		transform: translateX(-38px) scale(0.9);
-	}
-
-	#info {
-		align-content: center;
-		flex-wrap: wrap;
-	}
+  #info {
+    align-content: center;
+    flex-wrap: wrap;
+  }
 }
 
-@media (max-width : 700px) {
-	:root {
-		--pSize: .8rem;
-		--h2Size: 2rem;
-		--h3Size: 1.3rem;
-		--btnFontSize: .5rem;
-	}
+@media (max-width: 700px) {
+  :root {
+    --pSize: 0.8rem;
+    --h2Size: 2rem;
+    --h3Size: 1.3rem;
+    --btnFontSize: 0.5rem;
+  }
 
-	#image img {
-		transform: translateX(-28px) scale(0.9);
-		overflow: visible;
-	}
+  #image img {
+    transform: translateX(-28px) scale(0.9);
+    overflow: visible;
+  }
 }
 
-@media (max-width : 600px) {
+@media (max-width: 600px) {
+  @keyframes slideAnimation {
+    from {
+      transform: scale(0.3);
+    }
 
-	@keyframes slideAnimation {
-		from {
-			transform: scale(0.3);
-		}
+    to {
+      transform: scale(1);
+    }
+  }
 
-		to {
-			transform: scale(1);
-		}
-	}
+  @keyframes slideAnimationBack {
+    from {
+      transform: scale(0.3);
+    }
 
-	@keyframes slideAnimationBack {
-		from {
-			transform: scale(0.3);
-		}
+    to {
+      transform: scale(1);
+    }
+  }
 
-		to {
-			transform: scale(1);
-		}
-	}
+  header {
+    margin: 0.5rem;
+    right: 6vw;
+    bottom: 1%;
+    top: unset;
+    left: unset;
+  }
 
-	header {
-		margin: 0.5rem;
-		right: 6vw;
-		bottom: 0%;
-		top: unset;
-		left: unset;
-	}
+  header svg {
+    width: 65px;
+  }
 
-	#phoneDes {
-		display: flex;
-		flex-direction: column-reverse;
-		height: 100dvh;
-	}
+  #phoneDes {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100dvh;
+  }
 
-	:root {
-		--h1Size: 1.5rem;
-		--h2Size: 2rem;
-		--h3Size: 1.3rem;
-		--btnFontSize: .9rem;
-	}
+  :root {
+    --h1Size: 1.5rem;
+    --h2Size: 2rem;
+    --h3Size: 1.3rem;
+    --btnFontSize: 0.9rem;
+  }
 
-	#info {
-		padding: 0 1rem;
-		margin: 0 0 2rem;
-		align-items: center;
-	}
+  #info {
+    padding: 0 1rem;
+    margin: 0 0 2rem;
+    align-items: center;
+  }
 
-	#infoText {
-		min-height: 20dvh;
-	}
+  #infoText {
+    min-height: 20dvh;
+  }
 
-	#infoText,
-	#buttons {
-		width: 90%;
-	}
+  #infoText,
+  #buttons {
+    width: 90%;
+  }
 
-	#info #infoText h2,
-	#info #infoText h3 {
-		width: 100%;
-	}
+  #info #infoText h2,
+  #info #infoText h3 {
+    width: 100%;
+  }
 
-	#info #infoText #heading {
-		margin-top: 1rem;
-	}
+  #info #infoText #heading {
+    margin-top: 1rem;
+  }
 
-	#info p {
-		margin: 0;
-		margin-top: 1rem;
-	}
+  #info p {
+    margin: 0;
+    margin-top: 1rem;
+  }
 
-	#phoneDes #info #buttons {
-		height: auto;
-		margin-bottom: 0.5rem;
-	}
+  #phoneDes #info #buttons {
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
 
-	.swiper-slide {
-		justify-content: center;
-	}
+  .swiper-slide {
+    justify-content: center;
+  }
 
-	.swiper-slide-active {
-		left: 0;
-	}
+  .swiper-slide-active {
+    left: 0;
+  }
 
-	.products-container {
-		padding: 0;
-		padding-top: 30dvh;
-		height: 50dvh;
-	}
+  .products-container {
+    padding: 0;
+    padding-top: 30dvh;
+    height: 50dvh;
+  }
 
-	.swiper-container {
-		width: inherit;
-		height: inherit;
-	}
+  .swiper-container {
+    width: inherit;
+    height: inherit;
+  }
 
-	#image img {
-		transform: translateY(-80px) scale(0.9);
-	}
+  #image img {
+    transform: translateY(-80px) scale(0.9);
+  }
 }
