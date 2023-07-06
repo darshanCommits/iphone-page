@@ -26,12 +26,12 @@ const textToRender = {
 };
 
 const bgColors = {
-  black: 210,
+  black: 215,
   red: 335,
   green: 140,
   cyan: 180,
   purple: 260,
-  blue: 230,
+  blue: 235,
 };
 
 function updateTextContent(device) {
