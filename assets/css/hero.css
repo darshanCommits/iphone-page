@@ -252,10 +252,6 @@ body {
     margin: 0;
   }
 
-  #image img {
-    transform: translateX(-38px) scale(0.9);
-  }
-
   #info {
     align-content: center;
     flex-wrap: wrap;
@@ -268,12 +264,6 @@ body {
     --h2Size: 2rem;
     --h3Size: 1.3rem;
     --btnFontSize: 0.5rem;
-  }
-
-  #image img {
-    transform: translateX(-28px) scale(0.9);
-    overflow-y: visible;
-    z-index: 9999;
   }
 }
 
@@ -301,8 +291,7 @@ body {
   #phoneDes {
     display: flex;
     flex-direction: column-reverse;
-    height: 100vh;
-    margin-top: 10vh;
+    height: 130vh;
   }
 
   :root {
@@ -327,8 +316,7 @@ body {
     width: 90%;
   }
 
-  .calculator {
-    margin-top: 10vh;
+  #info button.calculator {
     width: 90%;
   }
 
@@ -367,6 +355,7 @@ body {
   }
 
   #image img {
-    z-index: 999999;
+    position: absolute;
+    overflow-y: visible;
   }
 }
