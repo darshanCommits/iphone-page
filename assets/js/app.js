@@ -1,9 +1,10 @@
 const info = document.querySelector('#infoText');
+const hero = document.querySelector("#phoneDes");
 const buttons = [...document.querySelector('#buttons').children];
 let prevDev = 'iPhone';
 
 document.addEventListener('DOMContentLoaded', () => {
-  applyDynamicCSS(bgColors.black);
+  applyDynamicCSS(hero, bgColors.black);
   info.innerHTML = getHtmlMarkup('iPhone');
 
   const swiper = new Swiper('.swiper-container', {
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const device = button.getAttribute('data-device');
 
       updateTextContent(device);
-      applyDynamicCSS(bgColors[color]);
+      applyDynamicCSS(hero, bgColors[color]);
 
       const slideIndex = parseInt(button.getAttribute('data-slide'));
       swiper.slideTo(slideIndex);

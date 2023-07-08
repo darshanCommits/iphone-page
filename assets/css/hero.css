@@ -1,46 +1,41 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Orbit&display=swap");
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+:html {
+  scroll-behavior: smooth;
 }
 
 :root {
-  --pSize: 1rem;
+  --pSize: 1.5rem;
   --h1Size: 2rem;
-  --h2Size: 2.3rem;
+  --h2Size: 3rem;
   --h3Size: 1.5rem;
   --btnFntSize: 1rem;
   --font-color: #faebd7;
 }
 
-header {
-  top: 6%;
-  left: 6%;
-  height: 30px;
-  color: #e84545;
-  font-family: orbit;
-  position: fixed;
-}
-
 body {
-  height: 100%;
-  width: 100%;
-  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 #phoneDes {
+  height: 100dvh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: var(--font-color);
   place-items: center;
 }
-
-h2 {
-  font-size: var(--h2Size);
+#infoText h2#title {
+  font-size: var(--h2Size) !important;
 }
 
+#infoText h3#heading {
+  font-size: var(--h3Size) !important;
+}
+
+#info p#para {
+  font-size: 1rem;
+  width: 90%;
+  margin: 1rem 0;
+  color: rgb(175, 175, 175);
+}
 #info {
   padding-left: 8vw;
   display: flex;
@@ -67,24 +62,7 @@ h2 {
   margin-top: 2rem;
 }
 
-h2 {
-  font-size: var(--h2Size);
-}
-
-#info h3,
-div {
-  font-size: var(--h3Size);
-  margin-right: auto;
-}
-
-#info p {
-  font-size: var(--pSize);
-  width: 80%;
-  margin: 1rem 0;
-  or: rgb(175, 175, 175);
-}
-
-h3:last-of-type {
+#info h3:last-of-type {
   margin: 1rem 0;
 }
 
@@ -92,11 +70,14 @@ h3:last-of-type {
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
-  min-height: 250px;
+  min-height: 16rem;
 }
 
+#infoText #title,
+#infoText #heading {
+  color: #faebd7;
+}
 #buttons {
-  height: 40px;
   color: #faebd7;
   margin-top: 1rem;
   display: flex;
@@ -105,12 +86,27 @@ h3:last-of-type {
   gap: 0.1rem;
 }
 
+#info button.calculator {
+  width: 99.5%;
+  background-color: #26bdeb;
+  border: none;
+}
+
+#info button.calculator:hover {
+  outline: 1px solid #26bdeb;
+  background-color: transparent;
+}
+
+.calculator a {
+  color: #faebd7 !important;
+}
+
 #buttons button:hover {
-  background-color: hsl(227, 10%, 35%);
+  background-color: #26bdeb;
 }
 
 #buttons button:active {
-  background-color: hsl(227, 10%, 55%);
+  background-color: #26bdcb;
 }
 
 #buttons button:focus {
@@ -121,7 +117,8 @@ h3:last-of-type {
   flex: 1;
 }
 
-#button:last-child {
+#blue,
+#purple {
   flex-basis: 100%;
 }
 
@@ -151,7 +148,7 @@ h3:last-of-type {
 
 .swiper-container {
   width: 100vw;
-  height: 100dvh;
+  height: inherit;
 }
 
 .swiper-wrapper {
@@ -160,6 +157,7 @@ h3:last-of-type {
 }
 
 .products-container {
+  height: inherit;
   padding-left: 4vw;
   overflow: hidden;
   width: 100%;
@@ -173,6 +171,7 @@ h3:last-of-type {
 .swiper-slide-active {
   scale: 1.5;
   left: 30vw;
+  top: -5dvh;
   animation-duration: 1s;
   transform: translateX(0);
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -245,8 +244,8 @@ h3:last-of-type {
   }
 
   #info h3,
-  p,
-  div {
+  #info p,
+  #info div {
     margin: 0;
   }
 
@@ -270,7 +269,8 @@ h3:last-of-type {
 
   #image img {
     transform: translateX(-28px) scale(0.9);
-    overflow: visible;
+    overflow-y: visible;
+    z-index: 9999;
   }
 }
 
@@ -293,18 +293,6 @@ h3:last-of-type {
     to {
       transform: scale(1);
     }
-  }
-
-  header {
-    margin: 0.5rem;
-    right: 6vw;
-    bottom: 1%;
-    top: unset;
-    left: unset;
-  }
-
-  header svg {
-    width: 65px;
   }
 
   #phoneDes {
@@ -335,13 +323,12 @@ h3:last-of-type {
     width: 90%;
   }
 
+  .calculator {
+    width: 90%;
+  }
   #info #infoText h2,
   #info #infoText h3 {
     width: 100%;
-  }
-
-  #info #infoText #heading {
-    margin-top: 1rem;
   }
 
   #info p {
@@ -351,7 +338,6 @@ h3:last-of-type {
 
   #phoneDes #info #buttons {
     height: auto;
-    margin-bottom: 0.5rem;
   }
 
   .swiper-slide {
