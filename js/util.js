@@ -1,27 +1,33 @@
 const textToRender = {
-  iPhone: {
-    heading: "Comptez sur notre service de réparation d'iPhone à Paris.",
-    para: "Faites confiance à nos experts qualifiés en réparation d'iPhone à Paris qui sont là pour vous offrir un service fiable et professionnel.",
+  'Fight Club': {
+    quote: 'The first rule of Fight Club is: You do not talk about Fight Club.',
+    image: 'fight_club_image.jpg',
   },
-  iPad: {
-    heading: 'Confiez la réparation de votre iPad à notre service à Paris',
-    para: 'SOSmaster vous propose de faire une réparation de votre tablette iPad à Paris. SOSmaster s’en charge au plus vite.',
+  'Breaking Bad': {
+    quote: 'I am the one who knocks!',
+    image: 'breaking_bad_image.jpg',
   },
-  MacBook: {
-    heading: 'Réparation de votre Macbook Pro et Macbook Air à Paris',
-    para: 'Contactez-nous pour toute question sur la réparation de votre MacBook. Nous sommes là pour vous aider.',
+  Monster: {
+    quote: 'Munch-Munch, Chomp-Chomp, Gobble-Gobble, Gulp.',
+    image: 'monster_image.jpg',
   },
-  iMac: {
-    heading: 'Réparation iMac à Paris',
-    para: 'La réparation d’iMac est un processus de réparation, de restauration ou de remplacement du matériel et des logiciels de votre iMac.',
+  Dark: {
+    quote:
+      'What if everything that came from the past was influenced by the future.',
+    image: 'dark_image.jpg',
   },
-  Computer: {
-    heading: 'Réparation pour ordinateur à Paris',
-    para: 'Faites confiance à nos experts en réparation d’ordinateur à Paris.',
+  Lookism: {
+    quote: 'What are you looking at? You little bitch.',
+    image: 'lookism_image.jpg',
   },
-  'Data Recovery': {
-    heading: 'SOSmaster spécialiste en récupération de données à Paris',
-    para: 'Récupération de données sur différents appareils : HDD, PC, iMac, Macbook, clé USB, carte SD, SSD, téléphone, tablette, iPhone, iPad, disque SAS et Freebox.',
+  Interstellar: {
+    quote: "We'll find a way. We always have.",
+    image: 'interstellar_image.jpg',
+  },
+  'Attack on Titan': {
+    quote:
+      "If you win, you live. If you lose, you die. If you don't fight, you can't win!",
+    image: 'attack_on_titan_image.jpg',
   },
 };
 
@@ -49,15 +55,22 @@ function updateTextContent(device) {
   prevDev = device;
 }
 
+const images = Object.entries(textToRender).map((x) => {
+  return {
+    alt: x[0],
+    src: x[1].image,
+  };
+});
+console.log(images);
+const setImage = (imgArray) => {};
+
 const getHtmlMarkup = (device) => {
   const deviceText = textToRender[device];
-  const heading = deviceText.heading;
-  const para = deviceText.para;
+  const quote = deviceText.quote;
 
   return `
       <h2 id="title">${device}</h2>
-      <h3 id="heading">${heading}</h3>
-      <p id="para">${para}</p>
+      <p id="quote">${quote}</p>
         `;
 };
 
