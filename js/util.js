@@ -61,8 +61,19 @@ const images = Object.entries(textToRender).map((x) => {
     src: x[1].image,
   };
 });
-console.log(images);
-const setImage = (imgArray) => {};
+
+const getImgMarkup = (imgObject) =>
+  imgObject
+    .map(
+      (x) =>
+        `
+        <div class="swiper-slide">
+          <img src=${x.src} alt=${x.alt} />
+        </div>
+      `,
+    )
+    .join('');
+console.log(getImgMarkup(images));
 
 const getHtmlMarkup = (device) => {
   const deviceText = textToRender[device];
