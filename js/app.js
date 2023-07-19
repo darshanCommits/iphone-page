@@ -1,11 +1,11 @@
 const info = document.querySelector('#infoText');
-const hero = document.querySelector("#phoneDes");
+const hero = document.querySelector('#phoneDes');
 const buttons = [...document.querySelector('#buttons').children];
-let prevDev = 'iPhone';
+let prevDev = 'MacBook';
 
 document.addEventListener('DOMContentLoaded', () => {
   applyDynamicCSS(hero, bgColors.black);
-  info.innerHTML = getHtmlMarkup('iPhone');
+  info.innerHTML = getHtmlMarkup('MacBook');
 
   const swiper = new Swiper('.swiper-container', {
     effect: 'custom',

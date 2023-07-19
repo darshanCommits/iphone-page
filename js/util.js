@@ -15,18 +15,23 @@ const textToRender = {
     heading: 'Réparation iMac à Paris',
     para: 'La réparation d’iMac est un processus de réparation, de restauration ou de remplacement du matériel et des logiciels de votre iMac.',
   },
-  Computer: {
+  'PC Portable': {
     heading: 'Réparation pour ordinateur à Paris',
     para: 'Faites confiance à nos experts en réparation d’ordinateur à Paris.',
   },
-  'Data Recovery': {
+  'Récupération De Données': {
     heading: 'SOSmaster spécialiste en récupération de données à Paris',
     para: 'Récupération de données sur différents appareils : HDD, PC, iMac, Macbook, clé USB, carte SD, SSD, téléphone, tablette, iPhone, iPad, disque SAS et Freebox.',
+  },
+  PS5: {
+    heading: 'Nous réparons toutes sortes de défauts dans PS5',
+    para: 'nous chez SOSmaster sommes les meilleurs en réparations ps5 à paris',
   },
 };
 
 const bgColors = {
   black: 215,
+  orange: 40,
   red: 335,
   green: 140,
   cyan: 180,
